@@ -1,519 +1,436 @@
-<div data-layer="CFG TWPO Home Catalog" class="CfgTwpoHomeCatalog w-[1280px] h-[2097px] relative bg-neutral-900">
-  <div data-layer="Main" class="Main w-[1280px] max-w-[1400px] p-8 left-0 top-[73px] absolute inline-flex flex-col justify-start items-start gap-12">
-    <div data-layer="Section" class="Section self-stretch relative bg-white/0 rounded-2xl shadow-2xl outline outline-1 outline-offset-[-1px] outline-zinc-500/20 flex flex-col justify-start items-start overflow-hidden">
-      <img data-layer="Image" class="Image w-[1214px] h-[610px] left-[1px] top-[1px] absolute" src="/src/assets/Image-001.jpg" alt="Hero Image" />
-      <div data-layer="Gradient" class="Gradient w-[1214px] h-[610px] left-[1px] top-[1px] absolute bg-gradient-to-r from-neutral-900 via-neutral-900/90 to-neutral-900/0"></div>
-      <img data-layer="Image" class="Image w-96 h-[610px] left-[810.34px] top-[1px] absolute opacity-20 mix-blend-overlay" src="/src/assets/Background+Image-005.jpg" alt="Background Overlay" />
-      <div data-layer="Container" class="Container w-[896px] h-[610px] max-w-[896px] min-h-[550px] relative">
-        <div data-layer="Overlay+Border+OverlayBlur" class="OverlayBorderOverlayblur size- px-4 py-1.5 left-[64px] top-[48px] absolute bg-black/80 rounded-full outline outline-1 outline-offset-[-1px] outline-amber-500/30 backdrop-blur-[6px] inline-flex justify-start items-center gap-2">
-          <div data-layer="Overlay+Shadow" class="OverlayShadow w-52 h-7 left-0 top-0 absolute bg-white/0 rounded-full shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.50)] shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.50)]"></div>
-          <div data-layer="Background+Shadow" class="BackgroundShadow size-2 bg-green-500 rounded-full shadow-[0px_0px_8px_0px_rgba(30,216,56,1.00)]"></div>
-          <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-            <div data-layer="distribuidor" class="Distribuidor w-36 h-4 justify-center text-white text-xs font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-wider">distribuidor</div>
-          </div>
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+<div class="lp">
+
+  <!-- HEADER -->
+  <header class="lp-header">
+    <div class="lp-header-inner">
+      <!-- Logo -->
+      <a href="/" class="lp-logo">
+        <div class="logo-icon"></div>
+        <div class="logo-div"></div>
+        <span class="logo-text">CFG TWPO</span>
+      </a>
+
+      <!-- Nav (desktop) -->
+      <nav class="lp-nav">
+        <a href="/" class="lp-nav-link">Inicio</a>
+        <a href="/catalog" class="lp-nav-link">Catálogo</a>
+        <a href="/catalog" class="lp-nav-link">Motos</a>
+        <a href="/catalog" class="lp-nav-link">Carros</a>
+        <a href="/catalog" class="lp-nav-link">Accesorios</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="lp-actions">
+        <div class="lp-search">
+          <svg class="lp-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Buscar..." class="lp-search-input" />
         </div>
-        <div data-layer="Heading 1" class="Heading1 w-[768px] left-[64px] top-[102px] absolute inline-flex flex-col justify-start items-start">
-          <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-            <div data-layer="máximo" class="mximo w-96 h-24 justify-center text-white text-8xl font-bold font-['Space_Grotesk'] uppercase leading-[96px] [text-shadow:_0px_2px_4px_rgb(0_0_0_/_0.30)]">máximo</div>
-          </div>
-          <div data-layer="Shadow" class="Shadow size- py-3 shadow-[0px_2px_10px_0px_rgba(223,32,26,0.50)] inline-flex justify-start items-start">
-            <div data-layer="rendimiento" class="Rendimiento w-[620.17px] h-24 justify-center text-red-600 text-8xl font-bold font-['Space_Grotesk'] uppercase leading-[96px]">rendimiento</div>
-          </div>
-          <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-            <div data-layer="para cada máquina" class="ParaCadaMQuina w-[648px] h-14 justify-center text-white text-6xl font-bold font-['Space_Grotesk'] uppercase leading-[60px]">para cada máquina</div>
-          </div>
+        <button class="lp-btn-login">Log In</button>
+        <a href="/catalog" class="lp-btn-cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span>Carrito (0)</span>
+        </a>
+        <!-- Mobile menu button -->
+        <button class="lp-mobile-menu" id="mobileMenuBtn" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="lp-mobile-nav" id="mobileNav">
+      <a href="/">Inicio</a>
+      <a href="/catalog">Catálogo</a>
+      <a href="/catalog">Motos</a>
+      <a href="/catalog">Carros</a>
+      <a href="/catalog">Accesorios</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="lp-hero">
+    <div class="lp-hero-bg"></div>
+    <div class="lp-hero-grad"></div>
+    <div class="lp-hero-inner">
+      <div class="lp-hero-content">
+        <!-- Badge -->
+        <div class="lp-badge">
+          <span class="lp-badge-dot"></span>
+          <span>DISTRIBUIDOR OFICIAL</span>
         </div>
-        <div data-layer="Margin" class="Margin w-[576px] max-w-[576px] pt-2 left-[64px] top-[394px] absolute inline-flex flex-col justify-start items-start">
-          <div data-layer="VerticalBorder" class="Verticalborder w-full max-w-[576px] pl-4 border-l-4 border-yellow-500 flex flex-col justify-start items-start">
-            <div data-layer="El catálogo de CFG Parts y TwPo Racing. Componentes diseñados para la calle y el circuito." class="ElCatLogoDeCfgPartsYTwpoRacingComponentesDiseAdosParaLaCalleYElCircuito w-[525.33px] h-14 justify-center"><span class="text-gray-400 text-xl font-medium font-['Space_Grotesk'] leading-7">El catálogo de </span><span class="text-white text-xl font-medium font-['Space_Grotesk'] leading-7">CFG Parts</span><span class="text-gray-400 text-xl font-medium font-['Space_Grotesk'] leading-7"> y </span><span class="text-white text-xl font-medium font-['Space_Grotesk'] leading-7">TwPo</span><span class="text-gray-400 text-xl font-medium font-['Space_Grotesk'] leading-7"> Racing.<br/>Componentes diseñados para la calle y el circuito.</span></div>
-          </div>
+
+        <!-- Heading -->
+        <h1 class="lp-hero-title">
+          <span class="lp-h1-white">máximo</span>
+          <span class="lp-h1-red">rendimiento</span>
+          <span class="lp-h1-white lp-h1-small">para cada máquina</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <div class="lp-hero-sub">
+          <p>El catálogo de <strong>CFG Parts</strong> y <strong>TwPo Racing</strong>. Componentes diseñados para la calle y el circuito.</p>
         </div>
-        <div data-layer="Container" class="Container w-[772.93px] pt-6 left-[59.07px] top-[482px] absolute inline-flex justify-start items-start gap-1.5">
-          <div data-layer="Button:css-transform" class="ButtonCssTransform h-14 inline-flex flex-col justify-start items-start">
-            <div data-layer="Button" class="Button h-14 px-7 bg-gradient-to-r from-red-600 to-red-700 rounded-xs shadow-[0px_4px_20px_0px_rgba(223,32,26,0.40)] inline-flex justify-start items-center">
-              <div data-layer="Container" class="Container size- flex justify-start items-center gap-2">
-                <div data-layer="Comprar para Motos" class="ComprarParaMotos w-36 h-7 text-center justify-center text-white text-lg font-bold font-['Space_Grotesk'] leading-7">Comprar para Motos</div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                  <div data-layer="Icon" class="Icon w-6 h-3.5 bg-white"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Button:css-transform" class="ButtonCssTransform h-14 inline-flex flex-col justify-start items-start">
-            <div data-layer="Button" class="Button h-14 px-7 bg-black rounded-xs outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex justify-start items-center">
-              <div data-layer="Container" class="Container size- flex justify-start items-center gap-2">
-                <div data-layer="Comprar Repuestos para Carros" class="ComprarRepuestosParaCarros w-48 h-7 text-center justify-center text-white text-lg font-bold font-['Space_Grotesk'] leading-7">Comprar Repuestos para Carros</div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                  <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+        <!-- CTAs -->
+        <div class="lp-hero-ctas">
+          <a href="/catalog" class="lp-cta-primary">
+            Comprar para Motos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+          </a>
+          <a href="/catalog" class="lp-cta-secondary">
+            Repuestos para Carros
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+          </a>
         </div>
       </div>
     </div>
-    <div data-layer="Section" class="Section self-stretch flex flex-col justify-start items-start gap-6">
-      <div data-layer="VerticalBorder" class="Verticalborder self-stretch pl-4 border-l-4 border-red-600 inline-flex justify-between items-end">
-        <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-          <div data-layer="explorar Categorias" class="ExplorarCategorias w-96 h-10 justify-center"><span class="text-white text-4xl font-bold font-['Space_Grotesk'] uppercase leading-10">explorar </span><span class="text-zinc-500 text-4xl font-bold font-['Space_Grotesk'] uppercase">Categorias</span></div>
-        </div>
-        <div data-layer="Link" class="Link size- flex justify-start items-center gap-1">
-          <div data-layer="Text" class="Text w-16 h-5 justify-center text-amber-500 text-sm font-bold font-['Space_Grotesk'] uppercase leading-5 tracking-tight">View All</div>
-          <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-            <div data-layer="Icon" class="Icon w-1.5 h-2 bg-amber-500"></div>
-          </div>
-        </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="lp-section">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <h2 class="lp-section-title">
+          <span class="t-white">EXPLORAR </span><span class="t-dim">CATEGORÍAS</span>
+        </h2>
+        <a href="/catalog" class="lp-view-all">
+          Ver Todo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg>
+        </a>
       </div>
-      <div data-layer="Container" class="Container self-stretch inline-flex justify-center items-start gap-6">
-        <div data-layer="Link" class="Link flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-72 relative bg-neutral-800 overflow-hidden">
-            <div data-layer="Background+Image" class="BackgroundImage size-72 left-0 top-0 absolute bg-blend-saturation bg-white"></div>
-            <div data-layer="Gradient" class="Gradient size-72 left-0 top-0 absolute opacity-90 bg-linear-to-t from-black via-black/50 to-transparent"></div>
-            <div data-layer="Overlay+HorizontalBorder+OverlayBlur" class="OverlayHorizontalborderOverlayblur w-72 p-4 left-0 top-[206px] absolute bg-black/80 border-t border-zinc-500/30 backdrop-blur-[2px] inline-flex flex-col justify-start items-start gap-0.5">
-              <div data-layer="Heading 3" class="Heading3 self-stretch flex flex-col justify-start items-start">
-                <div data-layer="motor" class="Motor self-stretch justify-center text-white text-lg font-bold font-['Space_Grotesk'] uppercase leading-7">motor</div>
-              </div>
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-                <div data-layer="componentes" class="Componentes self-stretch justify-center text-gray-400 text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-wide">componentes</div>
-              </div>
+
+      <div class="lp-cats">
+        <a href="/catalog" class="lp-cat">
+          <div class="lp-cat-img" style="background: linear-gradient(135deg, #1a0a0a, #2d1010);"></div>
+          <div class="lp-cat-overlay">
+            <p class="lp-cat-title">MOTOR</p>
+            <p class="lp-cat-sub">COMPONENTES</p>
+          </div>
+        </a>
+        <a href="/catalog" class="lp-cat">
+          <div class="lp-cat-img" style="background: linear-gradient(135deg, #0a1020, #10182d);"></div>
+          <div class="lp-cat-overlay">
+            <p class="lp-cat-title">SUSPENSIÓN</p>
+            <p class="lp-cat-sub">FRENOS Y AMORTIGUADORES</p>
+          </div>
+        </a>
+        <a href="/catalog" class="lp-cat">
+          <div class="lp-cat-img" style="background: linear-gradient(135deg, #1a1000, #2d1e00);"></div>
+          <div class="lp-cat-overlay">
+            <p class="lp-cat-title">ESCAPE</p>
+            <p class="lp-cat-sub">SISTEMAS COMPLETOS</p>
+          </div>
+        </a>
+        <a href="/catalog" class="lp-cat">
+          <div class="lp-cat-img" style="background: linear-gradient(135deg, #0a1a0a, #102d10);"></div>
+          <div class="lp-cat-overlay">
+            <p class="lp-cat-title">RUEDAS</p>
+            <p class="lp-cat-sub">LLANTAS Y RINES</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="lp-section lp-section-dark">
+    <div class="lp-container">
+      <div class="lp-section-header">
+        <div>
+          <h2 class="lp-section-title t-white">PIEZAS DESTACADAS</h2>
+          <p class="lp-section-sub">Mejores calificaciones de esta semana</p>
+        </div>
+        <a href="/catalog" class="lp-view-all">Ver Todo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9,18 15,12 9,6"/></svg></a>
+      </div>
+
+      <div class="lp-products">
+
+        <a href="/product" class="lp-product">
+          <div class="lp-product-img">
+            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #1a1a1a, #0d0d0d);"></div>
+            <span class="lp-stock lp-stock-green">Disponible</span>
+          </div>
+          <div class="lp-product-info">
+            <div class="lp-stars">★★★★★ <span>(4.8)</span></div>
+            <h3>Carbon Ceramic Rotor Kit</h3>
+            <p>Kit de discos de freno de carbono-cerámica</p>
+            <div class="lp-product-footer">
+              <span class="lp-price">$450.00</span>
+              <button class="lp-add-btn" aria-label="Agregar al carrito">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
             </div>
-            <div data-layer="Container" class="Container size- left-[255.90px] top-[8px] absolute opacity-0 inline-flex flex-col justify-start items-start">
-              <div data-layer="Icon" class="Icon size-5 bg-amber-500"></div>
+          </div>
+        </a>
+
+        <a href="/product" class="lp-product">
+          <div class="lp-product-img">
+            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #1a1200, #0d0900);"></div>
+            <span class="lp-stock lp-stock-green">Disponible</span>
+          </div>
+          <div class="lp-product-info">
+            <div class="lp-stars">★★★★★ <span>(5.0)</span></div>
+            <h3>Twin-Scroll Turbo T4</h3>
+            <p>Turbo de doble entrada T4</p>
+            <div class="lp-product-footer">
+              <span class="lp-price">$1,299.00</span>
+              <button class="lp-add-btn" aria-label="Agregar al carrito">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
             </div>
+          </div>
+        </a>
+
+        <a href="/product" class="lp-product lp-product-sold">
+          <div class="lp-product-img">
+            <div class="lp-product-img-inner lp-img-dim" style="background: linear-gradient(135deg, #111, #0a0a0a);"></div>
+            <span class="lp-stock lp-stock-gray">Agotado</span>
+          </div>
+          <div class="lp-product-info">
+            <div class="lp-stars lp-stars-dim">★★★★☆ <span>(4.2)</span></div>
+            <h3 class="t-dim">Aero Carbon Helmet</h3>
+            <p>Casco de carbono aerodinámico</p>
+            <div class="lp-product-footer">
+              <span class="lp-price lp-price-strike">$350.00</span>
+              <button class="lp-add-btn lp-add-btn-disabled" aria-label="No disponible" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+        <a href="/product" class="lp-product">
+          <div class="lp-product-img">
+            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #0a1a0a, #060d06);"></div>
+            <span class="lp-stock lp-stock-green">Disponible</span>
+          </div>
+          <div class="lp-product-info">
+            <div class="lp-stars">★★★★★ <span>(5.0)</span></div>
+            <h3>Iridium Spark Plugs (4-Pack)</h3>
+            <p>Bujías de iridio</p>
+            <div class="lp-product-footer">
+              <span class="lp-price">$85.99</span>
+              <button class="lp-add-btn" aria-label="Agregar al carrito">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="lp-footer">
+    <div class="lp-container">
+      <div class="lp-footer-grid">
+
+        <div class="lp-footer-brand">
+          <div class="lp-logo">
+            <div class="logo-icon"></div>
+            <div class="logo-div"></div>
+            <span class="logo-text">CFG TWPO</span>
+          </div>
+          <p>Importer &amp; Distributor</p>
+        </div>
+
+        <div class="lp-footer-col">
+          <h4>Shop</h4>
+          <a href="/catalog">Motocicletas</a>
+          <a href="/catalog">Carros</a>
+          <a href="/catalog">Accesorios</a>
+          <a href="/catalog">Estrenos</a>
+        </div>
+
+        <div class="lp-footer-col">
+          <h4>Support</h4>
+          <a href="#">Rastreo de pedido</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Envíos</a>
+          <a href="#">Contacto</a>
+        </div>
+
+        <div class="lp-footer-col">
+          <h4>Newsletter</h4>
+          <p class="lp-footer-newsletter-desc">Únete para ofertas exclusivas y lanzamientos de productos</p>
+          <div class="lp-newsletter">
+            <input type="email" placeholder="Tu correo" />
+            <button>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+            </button>
           </div>
         </div>
-        <div data-layer="Link" class="Link flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-72 relative bg-neutral-800 overflow-hidden">
-            <div data-layer="Background+Image" class="BackgroundImage size-72 left-0 top-0 absolute bg-blend-saturation bg-white"></div>
-            <div data-layer="Gradient" class="Gradient size-72 left-0 top-0 absolute opacity-90 bg-linear-to-t from-black via-black/50 to-transparent"></div>
-            <div data-layer="Overlay+HorizontalBorder+OverlayBlur" class="OverlayHorizontalborderOverlayblur w-72 p-4 left-0 top-[206px] absolute bg-black/80 border-t border-zinc-500/30 backdrop-blur-[2px] inline-flex flex-col justify-start items-start gap-0.5">
-              <div data-layer="Heading 3" class="Heading3 self-stretch flex flex-col justify-start items-start">
-                <div data-layer="Suspension" class="Suspension self-stretch justify-center text-white text-lg font-bold font-['Space_Grotesk'] uppercase leading-7">Suspension</div>
-              </div>
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-                <div data-layer="frenos y amortiguadores" class="FrenosYAmortiguadores self-stretch justify-center text-gray-400 text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-wide">frenos y amortiguadores</div>
-              </div>
-            </div>
-            <div data-layer="Container" class="Container size- left-[256px] top-[8px] absolute opacity-0 inline-flex flex-col justify-start items-start">
-              <div data-layer="Icon" class="Icon w-5 h-4 bg-amber-500"></div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Link" class="Link flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-72 relative bg-neutral-800 overflow-hidden">
-            <div data-layer="Background+Image" class="BackgroundImage size-72 left-0 top-0 absolute bg-blend-saturation bg-white"></div>
-            <div data-layer="Gradient" class="Gradient size-72 left-0 top-0 absolute opacity-90 bg-linear-to-t from-black via-black/50 to-transparent"></div>
-            <div data-layer="Overlay+HorizontalBorder+OverlayBlur" class="OverlayHorizontalborderOverlayblur w-72 p-4 left-0 top-[206px] absolute bg-black/80 border-t border-zinc-500/30 backdrop-blur-[2px] inline-flex flex-col justify-start items-start gap-0.5">
-              <div data-layer="Heading 3" class="Heading3 self-stretch flex flex-col justify-start items-start">
-                <div data-layer="escape" class="Escape self-stretch justify-center text-white text-lg font-bold font-['Space_Grotesk'] uppercase leading-7">escape</div>
-              </div>
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-                <div data-layer="sistemas completos" class="SistemasCompletos self-stretch justify-center text-gray-400 text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-wide">sistemas completos</div>
-              </div>
-            </div>
-            <div data-layer="Container" class="Container size- left-[256px] top-[8px] absolute opacity-0 inline-flex flex-col justify-start items-start">
-              <div data-layer="Icon" class="Icon w-5 h-4 bg-amber-500"></div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Link" class="Link flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-72 relative bg-neutral-800 overflow-hidden">
-            <div data-layer="Background+Image" class="BackgroundImage size-72 left-0 top-0 absolute bg-blend-saturation bg-white"></div>
-            <div data-layer="Gradient" class="Gradient size-72 left-0 top-0 absolute opacity-90 bg-linear-to-t from-black via-black/50 to-transparent"></div>
-            <div data-layer="Overlay+HorizontalBorder+OverlayBlur" class="OverlayHorizontalborderOverlayblur w-72 p-4 left-0 top-[206px] absolute bg-black/80 border-t border-zinc-500/30 backdrop-blur-[2px] inline-flex flex-col justify-start items-start gap-0.5">
-              <div data-layer="Heading 3" class="Heading3 self-stretch flex flex-col justify-start items-start">
-                <div data-layer="ruedas" class="Ruedas self-stretch justify-center text-white text-lg font-bold font-['Space_Grotesk'] uppercase leading-7">ruedas</div>
-              </div>
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-                <div data-layer="llantas y rines" class="LlantasYRines self-stretch justify-center text-gray-400 text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-wide">llantas y rines</div>
-              </div>
-            </div>
-            <div data-layer="Container" class="Container size- left-[256px] top-[8px] absolute opacity-0 inline-flex flex-col justify-start items-start">
-              <div data-layer="Icon" class="Icon size-5 bg-amber-500"></div>
-            </div>
-          </div>
+
+      </div>
+
+      <div class="lp-footer-bottom">
+        <span>© 2024 CFG TWPO. Todos los derechos reservados.</span>
+        <div class="lp-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor" stroke="none"/></svg>
+          </a>
         </div>
       </div>
     </div>
-    <div data-layer="Section" class="Section self-stretch pb-12 flex flex-col justify-start items-start gap-6">
-      <div data-layer="HorizontalBorder" class="Horizontalborder self-stretch pb-4 border-b border-zinc-500/30 inline-flex justify-start items-end">
-        <div data-layer="Container" class="Container size- flex justify-start items-center gap-3">
-          <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-            <div data-layer="Icon" class="Icon w-6 h-7 bg-red-600"></div>
-          </div>
-          <div data-layer="Container" class="Container w-80 inline-flex flex-col justify-start items-start gap-1">
-            <div data-layer="Heading 2" class="Heading2 self-stretch flex flex-col justify-start items-start">
-              <div data-layer="piezas destacadas" class="PiezasDestacadas w-72 h-9 justify-center text-white text-3xl font-bold font-['Space_Grotesk'] uppercase leading-9">piezas destacadas</div>
-            </div>
-            <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-              <div data-layer="Mejores calificaciones de esta semana" class="MejoresCalificacionesDeEstaSemana self-stretch h-5 justify-center text-gray-400 text-sm font-bold font-['Space_Grotesk'] uppercase leading-5 tracking-tight">Mejores calificaciones de esta semana</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-layer="Container" class="Container self-stretch inline-flex justify-center items-start gap-6">
-        <div data-layer="Background+Border" class="BackgroundBorder flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-56 p-4 relative bg-neutral-800 inline-flex justify-center items-center overflow-hidden">
-            <img data-layer="Image" class="Image w-72 h-56 left-0 top-0 absolute opacity-20" src="/src/assets/Background-004.jpg" alt="Background" />
-            <div data-layer="Background+Shadow" class="BackgroundShadow size- px-2 py-0.5 left-[9.98px] top-[12px] absolute bg-green-500 shadow-[0px_0px_10px_0px_rgba(30,216,56,1.00)] inline-flex flex-col justify-start items-start">
-              <div data-layer="Disponible" class="Disponible justify-center text-black text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-tight">Disponible</div>
-            </div>
-            <img data-layer="Brake disc rotor" class="BrakeDiscRotor size-40 max-w-72 relative shadow-[0px_20px_13px_0px_rgba(0,0,0,0.03)] shadow-[0px_8px_5px_0px_rgba(0,0,0,0.08)]" src="/src/assets/Brake disc rotor-007.jpg" alt="Brake Disc Rotor" />
-            <div data-layer="Button" class="Button size- p-2 left-[239.33px] top-[12px] absolute opacity-0 bg-black/50 rounded-full backdrop-blur-[2px] inline-flex flex-col justify-center items-center">
-              <div data-layer="Container" class="Container size- inline-flex justify-center items-start">
-                <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Container" class="Container self-stretch flex-1 p-5 flex flex-col justify-between items-start">
-            <div data-layer="Margin" class="Margin self-stretch pb-2 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-start items-center gap-1">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Margin" class="Margin size- pl-1 inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-7 h-4 justify-center text-gray-400 text-xs font-bold font-['Space_Grotesk'] leading-4">(4.8)</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Heading 3:margin" class="Heading3Margin self-stretch h-7 relative">
-              <div data-layer="Heading 3" class="Heading3 w-60 left-0 top-[-1px] absolute inline-flex flex-col justify-start items-start">
-                <div data-layer="Carbon Ceramic Rotor Kit" class="CarbonCeramicRotorKit w-56 h-6 justify-center text-white text-lg font-bold font-['Space_Grotesk'] leading-6">Carbon Ceramic Rotor Kit</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch pb-4 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start overflow-hidden">
-                <div data-layer="Kit de discos de freno de carbono-cerámica" class="KitDeDiscosDeFrenoDeCarbonoCerMica self-stretch justify-center text-gray-400 text-xs font-medium font-['Space_Grotesk'] leading-4">Kit de discos de freno de carbono-cerámica</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch flex-1 min-h-10 pt-6 flex flex-col justify-end items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-20 h-7 justify-center text-white text-xl font-black font-['Space_Grotesk'] leading-7">$450.00</div>
-                </div>
-                <div data-layer="Button" class="Button size-10 relative bg-zinc-500/20 rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 flex justify-center items-center">
-                  <div data-layer="Button:shadow" class="ButtonShadow size-10 left-0 top-0 absolute bg-white/0 rounded-lg shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.10)] shadow-lg"></div>
-                  <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                    <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Background+Border" class="BackgroundBorder flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-56 p-4 relative bg-neutral-800 inline-flex justify-center items-center overflow-hidden">
-            <img data-layer="Image" class="Image w-72 h-56 left-0 top-0 absolute opacity-20" src="/src/assets/Background-004.jpg" alt="Background" />
-            <div data-layer="Background+Shadow" class="BackgroundShadow size- px-2 py-0.5 left-[9.98px] top-[12px] absolute bg-green-500 shadow-[0px_0px_10px_0px_rgba(30,216,56,1.00)] inline-flex flex-col justify-start items-start">
-              <div data-layer="disponible" class="Disponible w-16 h-3.5 justify-center text-black text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-tight">disponible</div>
-            </div>
-            <img data-layer="Turbocharger" class="Turbocharger size-40 max-w-72 relative shadow-[0px_20px_13px_0px_rgba(0,0,0,0.03)] shadow-[0px_8px_5px_0px_rgba(0,0,0,0.08)]" src="/src/assets/Turbocharger-008.jpg" alt="Turbocharger" />
-            <div data-layer="Button" class="Button size- p-2 left-[239.33px] top-[12px] absolute opacity-0 bg-black/50 rounded-full backdrop-blur-[2px] inline-flex flex-col justify-center items-center">
-              <div data-layer="Container" class="Container size- inline-flex justify-center items-start">
-                <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Container" class="Container self-stretch flex-1 p-5 flex flex-col justify-between items-start">
-            <div data-layer="Margin" class="Margin self-stretch pb-2 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-start items-center gap-1">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Margin" class="Margin size- pl-1 inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-7 h-4 justify-center text-gray-400 text-xs font-bold font-['Space_Grotesk'] leading-4">(5.0)</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Heading 3:margin" class="Heading3Margin self-stretch h-7 relative">
-              <div data-layer="Heading 3" class="Heading3 w-60 left-0 top-[-1px] absolute inline-flex flex-col justify-start items-start">
-                <div data-layer="Text" class="Text w-44 h-6 justify-center text-white text-lg font-bold font-['Space_Grotesk'] leading-6">Twin-Scroll Turbo T4</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch pb-4 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start overflow-hidden">
-                <div data-layer="Turbo de doble entrada T4" class="TurboDeDobleEntradaT4 self-stretch justify-center text-gray-400 text-xs font-medium font-['Space_Grotesk'] leading-4">Turbo de doble entrada T4</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch flex-1 min-h-10 pt-6 flex flex-col justify-end items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-24 h-7 justify-center text-white text-xl font-black font-['Space_Grotesk'] leading-7">$1,299.00</div>
-                </div>
-                <div data-layer="Button" class="Button size-10 relative bg-zinc-500/20 rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 flex justify-center items-center">
-                  <div data-layer="Button:shadow" class="ButtonShadow size-10 left-0 top-0 absolute bg-white/0 rounded-lg shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.10)] shadow-lg"></div>
-                  <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                    <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Background+Border" class="BackgroundBorder flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-56 p-4 relative bg-neutral-800 inline-flex justify-center items-center overflow-hidden">
-            <img data-layer="Image" class="Image w-72 h-56 left-0 top-0 absolute opacity-20" src="/src/assets/Background-004.jpg" alt="Background" />
-            <div data-layer="Background" class="Background size- px-2 py-0.5 left-[9.98px] top-[12px] absolute bg-zinc-500 inline-flex flex-col justify-start items-start">
-              <div data-layer="agotado" class="Agotado w-12 h-3.5 justify-center text-white text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-tight">agotado</div>
-            </div>
-            <img data-layer="Motorcycle helmet" class="MotorcycleHelmet size-40 max-w-72 relative opacity-60" src="/src/assets/Motorcycle helmet-009.jpg" alt="Motorcycle Helmet" />
-            <div data-layer="Button" class="Button size- p-2 left-[239.33px] top-[12px] absolute opacity-0 bg-black/50 rounded-full backdrop-blur-[2px] inline-flex flex-col justify-center items-center">
-              <div data-layer="Container" class="Container size- inline-flex justify-center items-start">
-                <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Container" class="Container self-stretch flex-1 p-5 opacity-75 flex flex-col justify-between items-start">
-            <div data-layer="Margin" class="Margin self-stretch pb-2 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-start items-center gap-1">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-zinc-500"></div>
-                </div>
-                <div data-layer="Margin" class="Margin size- pl-1 inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-7 h-4 justify-center text-gray-400 text-xs font-bold font-['Space_Grotesk'] leading-4">(4.2)</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Heading 3:margin" class="Heading3Margin self-stretch h-7 relative">
-              <div data-layer="Heading 3" class="Heading3 w-60 left-0 top-[-1px] absolute inline-flex flex-col justify-start items-start">
-                <div data-layer="Aero Carbon Helmet" class="AeroCarbonHelmet w-44 h-6 justify-center text-gray-400 text-lg font-bold font-['Space_Grotesk'] leading-6">Aero Carbon Helmet</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch pb-4 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start overflow-hidden">
-                <div data-layer="Casco de carbono aerodinámico" class="CascoDeCarbonoAerodinMico self-stretch justify-center text-gray-400 text-xs font-medium font-['Space_Grotesk'] leading-4">Casco de carbono aerodinámico</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch flex-1 min-h-10 pt-6 flex flex-col justify-end items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-20 h-7 justify-center text-zinc-500 text-xl font-bold font-['Space_Grotesk'] line-through leading-7">$350.00</div>
-                </div>
-                <div data-layer="Button" class="Button size-10 bg-zinc-500/10 rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500/30 flex justify-center items-center">
-                  <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                    <div data-layer="Icon" class="Icon w-3.5 h-4 bg-white/30"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Background+Border" class="BackgroundBorder flex-1 self-stretch bg-black rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-          <div data-layer="Background" class="Background self-stretch h-56 p-4 relative bg-neutral-800 inline-flex justify-center items-center overflow-hidden">
-            <img data-layer="Image" class="Image w-72 h-56 left-0 top-0 absolute opacity-20" src="/src/assets/Background-004.jpg" alt="Background" />
-            <div data-layer="Background+Shadow" class="BackgroundShadow size- px-2 py-0.5 left-[9.98px] top-[12px] absolute bg-green-500 shadow-[0px_0px_10px_0px_rgba(30,216,56,1.00)] inline-flex flex-col justify-start items-start">
-              <div data-layer="disponible" class="Disponible w-16 h-3.5 justify-center text-black text-[10px] font-bold font-['Space_Grotesk'] uppercase leading-4 tracking-tight">disponible</div>
-            </div>
-            <img data-layer="Spark plugs" class="SparkPlugs size-40 max-w-72 relative shadow-[0px_20px_13px_0px_rgba(0,0,0,0.03)] shadow-[0px_8px_5px_0px_rgba(0,0,0,0.08)]" src="/src/assets/Spark plugs-010.jpg" alt="Spark Plugs" />
-            <div data-layer="Button" class="Button size- p-2 left-[239.33px] top-[12px] absolute opacity-0 bg-black/50 rounded-full backdrop-blur-[2px] inline-flex flex-col justify-center items-center">
-              <div data-layer="Container" class="Container size- inline-flex justify-center items-start">
-                <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-              </div>
-            </div>
-          </div>
-          <div data-layer="Container" class="Container self-stretch flex-1 p-5 flex flex-col justify-between items-start">
-            <div data-layer="Margin" class="Margin self-stretch pb-2 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch inline-flex justify-start items-center gap-1">
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                  <div data-layer="Icon" class="Icon w-3.5 h-3 bg-amber-500"></div>
-                </div>
-                <div data-layer="Margin" class="Margin size- pl-1 inline-flex flex-col justify-start items-start">
-                  <div data-layer="Text" class="Text w-7 h-4 justify-center text-gray-400 text-xs font-bold font-['Space_Grotesk'] leading-4">(5.0)</div>
-                </div>
-              </div>
-            </div>
-            <div data-layer="Heading 3:margin" class="Heading3Margin self-stretch h-12 relative">
-              <div data-layer="Heading 3" class="Heading3 w-60 pb-[0.75px] left-0 top-[-0.75px] absolute inline-flex flex-col justify-start items-start">
-                <div data-layer="Text" class="Text w-48 h-11 justify-center text-white text-lg font-bold font-['Space_Grotesk'] leading-6">Iridium Spark Plugs (4-<br/>Pack)</div>
-              </div>
-            </div>
-            <div data-layer="Margin" class="Margin self-stretch pb-4 flex flex-col justify-start items-start">
-              <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start overflow-hidden">
-                <div data-layer="Bujías de iridio" class="BujAsDeIridio self-stretch justify-center text-gray-400 text-xs font-medium font-['Space_Grotesk'] leading-4">Bujías de iridio</div>
-              </div>
-            </div>
-            <div data-layer="Container" class="Container self-stretch inline-flex justify-between items-center">
-              <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-                <div data-layer="Text" class="Text w-16 h-7 justify-center text-white text-xl font-black font-['Space_Grotesk'] leading-7">$85.99</div>
-              </div>
-              <div data-layer="Button" class="Button size-10 relative bg-zinc-500/20 rounded-lg outline outline-1 outline-offset-[-1px] outline-zinc-500 flex justify-center items-center">
-                <div data-layer="Button:shadow" class="ButtonShadow size-10 left-0 top-0 absolute bg-white/0 rounded-lg shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.10)] shadow-lg"></div>
-                <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-center">
-                  <div data-layer="Icon" class="Icon size-4 bg-white"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div data-layer="Footer" class="Footer w-[1280px] px-6 py-12 left-0 top-[1762.75px] absolute bg-black border-t border-zinc-500/30 inline-flex flex-col justify-start items-start gap-10">
-    <div data-layer="Container" class="Container w-full max-w-[1400px] inline-flex justify-center items-start gap-10">
-      <div data-layer="Container" class="Container flex-1 self-stretch inline-flex flex-col justify-start items-start gap-4">
-        <div data-layer="Link" class="Link size- inline-flex justify-start items-center gap-3">
-          <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-            <div data-layer="logo CFG blanco 1" class="LogoCfgBlanco1 w-12 h-10 relative overflow-hidden">
-              <div data-layer="Vector" class="Vector w-12 h-7 left-[3px] top-[0.28px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector size-px left-[21.74px] top-[13.12px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector size-px left-[22.62px] top-[13.58px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-1.5 h-1 left-[7.84px] top-[7.40px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-4 h-2.5 left-[17.60px] top-[19.68px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-[4.82px] left-[37px] top-[30.47px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-1 left-[7.66px] top-[30.56px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[2.94px] h-px left-[10.58px] top-[31.75px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-1 left-[13.89px] top-[30.56px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-0.5 h-[1.43px] left-[17.86px] top-[31.81px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-1 left-[22.55px] top-[30.55px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[3.14px] h-px left-[25.45px] top-[31.73px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-1 left-[30.93px] top-[30.56px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-4 h-[3.03px] left-[8.10px] top-[36.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.72px] h-px left-[16.98px] top-[37.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.72px] h-px left-[8.73px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.72px] h-px left-[10.65px] top-[37.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.63px] h-[0.45px] left-[15.07px] top-[38.06px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.73px] h-px left-[18.95px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.62px] h-[0.46px] left-[22.13px] top-[38.05px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-0.5 h-[2.47px] left-[26.84px] top-[36.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.73px] h-px left-[27.48px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-1.5 h-[2.49px] left-[28.89px] top-[36.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-1 h-[2.49px] left-[34.92px] top-[36.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.73px] h-px left-[35.54px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-2 h-[2.49px] left-[38.87px] top-[36.45px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.71px] h-px left-[40.36px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.73px] h-px left-[42.33px] top-[37.46px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.62px] h-[0.46px] left-[45.53px] top-[38.05px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[0.86px] h-[2.37px] left-[4.19px] top-[36.54px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-[2.86px] h-0.5 left-[5.16px] top-[37.03px] absolute bg-red-600"></div>
-              <div data-layer="Vector" class="Vector w-0.5 h-[2.45px] left-[24.12px] top-[37.05px] absolute bg-red-600"></div>
-            </div>
-          </div>
-          <div data-layer="Vertical Divider:css-transform" class="VerticalDividerCssTransform h-12 py-2 inline-flex flex-col justify-center items-start">
-            <div data-layer="Vertical Divider" class="VerticalDivider w-px h-8 origin-top-left rotate-12 bg-zinc-500/50"></div>
-          </div>
-          <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-            <img data-layer="logo TWPO sin fondo (1) 1" class="LogoTwpoSinFondo11 w-20 h-11" src="/src/assets/logo TWPO sin fondo (1) 1-003.png" alt="TWPO Logo" />
-          </div>
-        </div>
-        <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start gap-2">
-          <div data-layer="Description de la empresa" class="DescriptionDeLaEmpresa w-64 h-16 justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-6">Description de la empresa</div>
-          <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-            <div data-layer="Importer & Distributor" class="ImporterDistributor self-stretch justify-center text-zinc-500 text-xs font-normal font-['Space_Grotesk'] leading-4">Importer & Distributor</div>
-          </div>
-        </div>
-      </div>
-      <div data-layer="Container" class="Container flex-1 self-stretch inline-flex flex-col justify-start items-start gap-3">
-        <div data-layer="Heading 4" class="Heading4 self-stretch pl-2 border-l-2 border-red-600 flex flex-col justify-start items-start">
-          <div data-layer="Text" class="Text w-10 h-5 justify-center text-white text-sm font-bold font-['Space_Grotesk'] uppercase leading-5 tracking-wide">Shop</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Motocicletas" class="Motocicletas self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Motocicletas</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Carros" class="Carros self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Carros</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Accessorios" class="Accessorios self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Accessorios</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Estrenos" class="Estrenos self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Estrenos</div>
-        </div>
-      </div>
-      <div data-layer="Container" class="Container flex-1 self-stretch inline-flex flex-col justify-start items-start gap-3">
-        <div data-layer="Heading 4" class="Heading4 self-stretch pl-2 border-l-2 border-red-600 flex flex-col justify-start items-start">
-          <div data-layer="Text" class="Text w-16 h-5 justify-center text-white text-sm font-bold font-['Space_Grotesk'] uppercase leading-5 tracking-wide">Support</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Rastreo de pedido" class="RastreoDePedido self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Rastreo de pedido</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Devoluciones y cambios" class="DevolucionesYCambios self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Devoluciones y cambios</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Información de envío" class="InformaciNDeEnvO self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Información de envío</div>
-        </div>
-        <div data-layer="Link" class="Link self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Contacto" class="Contacto self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Contacto</div>
-        </div>
-      </div>
-      <div data-layer="Container" class="Container flex-1 self-stretch inline-flex flex-col justify-start items-start gap-4">
-        <div data-layer="Heading 4" class="Heading4 self-stretch pl-2 border-l-2 border-red-600 flex flex-col justify-start items-start">
-          <div data-layer="Text" class="Text w-24 h-5 justify-center text-white text-sm font-bold font-['Space_Grotesk'] uppercase leading-5 tracking-wide">Newsletter</div>
-        </div>
-        <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start">
-          <div data-layer="Únete para ofertas exclusivas y lanzamientos de productos" class="NeteParaOfertasExclusivasYLanzamientosDeProductos self-stretch justify-center text-gray-400 text-sm font-normal font-['Space_Grotesk'] leading-5">Únete para ofertas exclusivas y lanzamientos de productos</div>
-        </div>
-        <div data-layer="Container" class="Container self-stretch inline-flex justify-start items-start">
-          <div data-layer="Input" class="Input flex-1 self-stretch px-3 py-2 bg-black rounded-tl-xs rounded-bl-xs border-l border-t border-b border-zinc-500 inline-flex flex-col justify-start items-start overflow-hidden">
-            <div data-layer="Container" class="Container self-stretch flex flex-col justify-start items-start overflow-hidden">
-              <div data-layer="Enter your email" class="EnterYourEmail self-stretch justify-center text-gray-500 text-sm font-normal font-['Space_Grotesk']">Enter your email</div>
-            </div>
-          </div>
-          <div data-layer="Button" class="Button size- px-4 py-2 bg-red-600 rounded-tr-xs rounded-br-xs inline-flex flex-col justify-center items-center">
-            <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-              <div data-layer="Icon" class="Icon w-4 h-4 bg-white"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div data-layer="Bottom Bar" class="BottomBar self-stretch pt-8 border-t border-zinc-500/30 inline-flex justify-between items-center">
-      <div data-layer="Container" class="Container size- inline-flex flex-col justify-start items-start">
-        <div data-layer="Text" class="Text w-72 h-4 justify-center text-zinc-500 text-xs font-normal font-['Space_Grotesk'] leading-4">© 2024 CFG TWPO. Todos los derechos reservados.</div>
-      </div>
-      <div data-layer="Container" class="Container size- flex justify-start items-center gap-4">
-        <div data-layer="Icon" class="Icon w-4 h-4 bg-zinc-500"></div>
-        <div data-layer="Icon" class="Icon w-4 h-4 bg-zinc-500"></div>
-        <div data-layer="Icon" class="Icon w-4 h-4 bg-zinc-500"></div>
-      </div>
-    </div>
-  </div>
+  </footer>
+
 </div>
+
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const nav = document.getElementById('mobileNav');
+  btn?.addEventListener('click', () => nav?.classList.toggle('open'));
+</script>
+</Layout>
+
+<style>
+  .lp { min-height: 100vh; background: #0d0d0d; color: #fff; font-family: 'Space Grotesk', sans-serif; }
+  .t-white { color: #fff; }
+  .t-dim { color: rgba(255,255,255,.45); }
+
+  /* ── HEADER ── */
+  .lp-header { background: #000; border-bottom: 1px solid rgba(255,255,255,.08); position: sticky; top: 0; z-index: 100; }
+  .lp-header-inner { max-width: 1400px; margin: 0 auto; padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: nowrap; }
+  .lp-logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; flex-shrink: 0; }
+  .logo-icon { width: 24px; height: 18px; background: #DF201A; clip-path: polygon(10% 0,90% 0,100% 100%,0 100%); }
+  .logo-div { width: 1px; height: 22px; background: rgba(255,255,255,.2); transform: rotate(12deg); }
+  .logo-text { font-size: 1rem; font-weight: 700; letter-spacing: .06em; color: #fff; }
+  .lp-nav { display: flex; align-items: center; gap: 1.5rem; flex: 1; }
+  .lp-nav-link { font-size: .82rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.5); text-decoration: none; transition: color .15s; white-space: nowrap; }
+  .lp-nav-link:hover { color: #fff; }
+  .lp-actions { display: flex; align-items: center; gap: .75rem; margin-left: auto; }
+  .lp-search { display: flex; align-items: center; gap: .5rem; background: #1a1a1a; border: 1px solid rgba(255,255,255,.1); border-radius: 8px; padding: .5rem .75rem; min-width: 0; }
+  .lp-search-icon { width: 14px; height: 14px; color: rgba(255,255,255,.4); flex-shrink: 0; }
+  .lp-search-input { background: none; border: none; outline: none; color: #fff; font-family: inherit; font-size: .82rem; width: clamp(80px, 15vw, 160px); }
+  .lp-search-input::placeholder { color: rgba(255,255,255,.3); }
+  .lp-btn-login { background: none; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.6); padding: .45rem 1rem; border-radius: 999px; font-family: inherit; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; white-space: nowrap; transition: border-color .15s, color .15s; }
+  .lp-btn-login:hover { border-color: rgba(255,255,255,.5); color: #fff; }
+  .lp-btn-cart { display: flex; align-items: center; gap: .4rem; background: #DF201A; color: #fff; padding: .45rem 1rem; border-radius: 999px; font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; white-space: nowrap; box-shadow: 0 0 15px rgba(223,32,26,.3); transition: background .15s; }
+  .lp-btn-cart:hover { background: #c01b15; }
+  .lp-btn-cart svg { width: 14px; height: 14px; }
+  .lp-mobile-menu { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: .4rem; }
+  .lp-mobile-menu span { display: block; width: 20px; height: 2px; background: #fff; border-radius: 1px; }
+  .lp-mobile-nav { display: none; padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,.08); flex-direction: column; gap: .25rem; background: #000; }
+  .lp-mobile-nav a { display: block; padding: .6rem .5rem; font-size: .9rem; font-weight: 600; color: rgba(255,255,255,.6); text-decoration: none; border-radius: 6px; transition: background .15s, color .15s; }
+  .lp-mobile-nav a:hover { background: rgba(255,255,255,.05); color: #fff; }
+  .lp-mobile-nav.open { display: flex; }
+
+  /* ── HERO ── */
+  .lp-hero { position: relative; overflow: hidden; min-height: clamp(400px, 60vh, 680px); display: flex; align-items: center; }
+  .lp-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0a 0%, #111 60%, #1a0a08 100%); }
+  .lp-hero-grad { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(223,32,26,.08) 0%, transparent 70%); }
+  .lp-hero-inner { max-width: 1400px; width: 100%; margin: 0 auto; padding: clamp(3rem,8vw,6rem) 1.5rem; position: relative; z-index: 1; }
+  .lp-hero-content { max-width: 720px; }
+  .lp-badge { display: inline-flex; align-items: center; gap: .4rem; font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); background: rgba(0,0,0,.7); border: 1px solid rgba(227,155,29,.3); border-radius: 999px; padding: .3rem .85rem; margin-bottom: 1.5rem; backdrop-filter: blur(4px); }
+  .lp-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: #1ED838; box-shadow: 0 0 6px #1ED838; }
+  .lp-hero-title { font-size: clamp(3rem,10vw,7rem); font-weight: 700; line-height: 0.95; letter-spacing: -.02em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: .05em; }
+  .lp-h1-white { color: #fff; text-shadow: 0 2px 4px rgba(0,0,0,.3); }
+  .lp-h1-red { color: #DF201A; text-shadow: 0 2px 10px rgba(223,32,26,.5); }
+  .lp-h1-small { font-size: clamp(1.6rem,5vw,3.5rem); color: rgba(255,255,255,.8); }
+  .lp-hero-sub { border-left: 4px solid #E39B1D; padding-left: 1rem; margin-bottom: 2rem; max-width: 540px; }
+  .lp-hero-sub p { font-size: clamp(.9rem,2vw,1.1rem); color: rgba(255,255,255,.55); line-height: 1.6; }
+  .lp-hero-sub strong { color: #fff; }
+  .lp-hero-ctas { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .lp-cta-primary { display: inline-flex; align-items: center; gap: .5rem; padding: clamp(.75rem,2vw,1rem) clamp(1.25rem,3vw,1.75rem); background: linear-gradient(135deg, #DF201A, #c01b15); color: #fff; font-size: clamp(.85rem,1.5vw,.95rem); font-weight: 700; text-decoration: none; border-radius: 4px; box-shadow: 0 4px 20px rgba(223,32,26,.4); transition: transform .15s, box-shadow .15s; }
+  .lp-cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(223,32,26,.5); }
+  .lp-cta-primary svg { width: 16px; height: 16px; }
+  .lp-cta-secondary { display: inline-flex; align-items: center; gap: .5rem; padding: clamp(.75rem,2vw,1rem) clamp(1.25rem,3vw,1.75rem); background: #000; color: #fff; font-size: clamp(.85rem,1.5vw,.95rem); font-weight: 700; text-decoration: none; border: 1px solid rgba(255,255,255,.2); border-radius: 4px; transition: border-color .15s, background .15s; }
+  .lp-cta-secondary:hover { border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.05); }
+  .lp-cta-secondary svg { width: 16px; height: 16px; }
+
+  /* ── SHARED SECTION ── */
+  .lp-section { padding: clamp(3rem,6vw,5rem) 0; }
+  .lp-section-dark { background: #000; }
+  .lp-container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+  .lp-section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: clamp(1.5rem,3vw,2.5rem); flex-wrap: wrap; gap: 1rem; border-left: 4px solid #DF201A; padding-left: 1rem; }
+  .lp-section-title { font-size: clamp(1.2rem,3vw,1.8rem); font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; }
+  .lp-section-sub { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.35); margin-top: .3rem; }
+  .lp-view-all { display: flex; align-items: center; gap: .25rem; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #E39B1D; text-decoration: none; white-space: nowrap; transition: gap .15s; }
+  .lp-view-all:hover { gap: .5rem; }
+  .lp-view-all svg { width: 14px; height: 14px; }
+
+  /* ── CATEGORIES ── */
+  .lp-cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1rem; }
+  .lp-cat { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); text-decoration: none; display: block; aspect-ratio: 3/4; }
+  @media (min-width: 768px) { .lp-cat { aspect-ratio: 1/1; } }
+  .lp-cat-img { position: absolute; inset: 0; }
+  .lp-cat-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.6) 50%, transparent 100%); border-top: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(2px); }
+  .lp-cat-title { font-size: .95rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .04em; margin-bottom: .15rem; }
+  .lp-cat-sub { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); }
+  .lp-cat:hover .lp-cat-overlay { background: linear-gradient(to top, rgba(223,32,26,.4) 0%, rgba(0,0,0,.6) 50%, transparent 100%); }
+
+  /* ── PRODUCTS ── */
+  .lp-products { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.25rem; }
+  .lp-product { display: flex; flex-direction: column; background: #0d0d0d; border: 1px solid rgba(255,255,255,.08); border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+  .lp-product:hover { border-color: rgba(255,255,255,.2); transform: translateY(-3px); }
+  .lp-product-sold { opacity: .7; }
+  .lp-product-img { position: relative; aspect-ratio: 4/3; }
+  .lp-product-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .lp-img-dim { opacity: .5; }
+  .lp-stock { position: absolute; top: .75rem; left: .75rem; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: .2rem .55rem; border-radius: 3px; }
+  .lp-stock-green { background: #1ED838; color: #000; }
+  .lp-stock-gray { background: rgba(255,255,255,.15); color: rgba(255,255,255,.7); }
+  .lp-product-info { padding: 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+  .lp-stars { font-size: .8rem; color: #E39B1D; }
+  .lp-stars span { color: rgba(255,255,255,.35); font-size: .72rem; }
+  .lp-stars-dim { color: rgba(227,155,29,.4); }
+  .lp-product-info h3 { font-size: .92rem; font-weight: 700; color: #fff; line-height: 1.3; }
+  .lp-product-info p { font-size: .75rem; color: rgba(255,255,255,.4); }
+  .lp-product-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: .75rem; }
+  .lp-price { font-size: 1.1rem; font-weight: 800; color: #fff; }
+  .lp-price-strike { text-decoration: line-through; color: rgba(255,255,255,.3); }
+  .lp-add-btn { width: 36px; height: 36px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s; }
+  .lp-add-btn svg { width: 15px; height: 15px; color: #fff; }
+  .lp-add-btn:hover { background: #DF201A; border-color: #DF201A; }
+  .lp-add-btn-disabled { opacity: .3; cursor: not-allowed; }
+
+  /* ── FOOTER ── */
+  .lp-footer { background: #000; border-top: 1px solid rgba(255,255,255,.08); padding: clamp(2.5rem,5vw,4rem) 0 0; }
+  .lp-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: clamp(1.5rem,3vw,2.5rem); margin-bottom: 2rem; }
+  .lp-footer-brand .lp-logo { margin-bottom: .75rem; }
+  .lp-footer-brand > p { font-size: .75rem; color: rgba(255,255,255,.3); }
+  .lp-footer-col { display: flex; flex-direction: column; gap: .5rem; }
+  .lp-footer-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #fff; padding-left: .6rem; border-left: 2px solid #DF201A; margin-bottom: .25rem; }
+  .lp-footer-col a { font-size: .82rem; color: rgba(255,255,255,.4); text-decoration: none; transition: color .15s; }
+  .lp-footer-col a:hover { color: #fff; }
+  .lp-footer-col p.lp-footer-newsletter-desc { font-size: .78rem; color: rgba(255,255,255,.4); line-height: 1.5; }
+  .lp-newsletter { display: flex; border: 1px solid rgba(255,255,255,.15); border-radius: 4px; overflow: hidden; margin-top: .25rem; }
+  .lp-newsletter input { flex: 1; background: #0d0d0d; border: none; outline: none; color: #fff; font-family: inherit; font-size: .8rem; padding: .6rem .75rem; min-width: 0; }
+  .lp-newsletter input::placeholder { color: rgba(255,255,255,.25); }
+  .lp-newsletter button { background: #DF201A; border: none; padding: .6rem .85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .15s; }
+  .lp-newsletter button:hover { background: #c01b15; }
+  .lp-newsletter button svg { width: 16px; height: 16px; color: #fff; }
+  .lp-footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.25rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem; font-size: .72rem; color: rgba(255,255,255,.3); }
+  .lp-social { display: flex; gap: 1rem; }
+  .lp-social a { color: rgba(255,255,255,.35); transition: color .15s; }
+  .lp-social a:hover { color: #fff; }
+  .lp-social svg { width: 18px; height: 18px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .lp-nav { display: none; }
+    .lp-btn-login { display: none; }
+    .lp-search { display: none; }
+    .lp-mobile-menu { display: flex; }
+  }
+  @media (max-width: 600px) {
+    .lp-hero-ctas { flex-direction: column; }
+    .lp-cta-primary, .lp-cta-secondary { width: 100%; justify-content: center; }
+    .lp-products { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 360px) {
+    .lp-products { grid-template-columns: 1fr; }
+  }
+</style>
