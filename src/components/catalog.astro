@@ -1,0 +1,16 @@
+---
+/*
+  1️⃣ Importamos el componente React principal
+  (el index.tsx que moviste a src/components)
+*/
+import CatalogComponent from "../components/index";
+---
+
+<!-- 
+  2️⃣ Renderizamos el componente React dentro de Astro.
+  
+  client:load significa:
+  - Se renderiza cuando el navegador carga
+  - Activa React en el cliente
+-->
+<CatalogComponent client:load />
