@@ -1,7 +1,6 @@
 /* Tailwind CSS v4 - Import */
 @import "tailwindcss";
 
-/* Custom Theme Variables */
 @theme {
   /* Colors */
   --color-bg-main: #121417;
