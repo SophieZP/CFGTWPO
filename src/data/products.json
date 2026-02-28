@@ -1,0 +1,50 @@
+[
+  {
+    "id": "piston-kit",
+    "slug": "piston-kit",
+    "name": "High-Performance TWPO Piston Kit",
+    "sku": "TWPO-PK-500",
+    "price": 249.99,
+    "originalPrice": 299.99,
+    "rating": 5,
+    "reviews": 124,
+    "description": "Engineered for maximum durability and compression, the CFG TWPO Piston Kit is the ultimate upgrade for your track-focused machine. Forged from high-strength aluminum alloy, it delivers superior heat resistance and reduced friction.",
+    "image": "Piston side view-014.jpg"
+  },
+  {
+    "id": "ceramic-rotor-kit",
+    "slug": "ceramic-rotor-kit",
+    "name": "Carbon Ceramic Rotor Kit",
+    "sku": "CFG-BR-700",
+    "price": 450.00,
+    "originalPrice": 525.00,
+    "rating": 4.8,
+    "reviews": 89,
+    "description": "Kit de discos de freno de carbono-cerámica de alto rendimiento para máxima frenada.",
+    "image": "Brake disc rotor-007.jpg"
+  },
+  {
+    "id": "turbo-t4",
+    "slug": "turbo-t4",
+    "name": "Twin-Scroll Turbo T4",
+    "sku": "TWPO-TB-400",
+    "price": 1299.00,
+    "originalPrice": 1599.00,
+    "rating": 5.0,
+    "reviews": 156,
+    "description": "Turbo de doble entrada T4 con tecnología de scroll gemelo para máxima eficiencia.",
+    "image": "Turbocharger-008.jpg"
+  },
+  {
+    "id": "spark-plugs",
+    "slug": "spark-plugs",
+    "name": "Iridium Spark Plugs (4-Pack)",
+    "sku": "CFG-SP-200",
+    "price": 85.99,
+    "originalPrice": 119.99,
+    "rating": 5.0,
+    "reviews": 342,
+    "description": "Bujías de iridio de larga duración para mejor rendimiento del motor.",
+    "image": "Spark plugs-010.jpg"
+  }
+]

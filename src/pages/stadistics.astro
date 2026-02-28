@@ -1,282 +1,877 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import bgImage from '../assets/Background+Image-005.jpg';
+import SharedLayout from '../layouts/SharedLayout.astro';
 ---
 
-<Layout>
-  <div class="stats-page" style={`background-image: url(${bgImage.src}); background-size: cover; background-position: center; background-blend-mode: overlay;`}>
-    <!-- Header -->
-    <header class="stats-header">
-      <div class="stats-header-inner">
-        <a href="/" class="stats-logo">
-          <div class="stats-logo-icon"></div>
-          <div class="stats-logo-div"></div>
-          <span>CFG TWPO</span>
-        </a>
+<SharedLayout title="Estadísticas" activePage="support">
+<div class="st-page">
 
-        <nav class="stats-nav">
-          <a href="/">Home</a>
-          <a href="/catalog">Catálogo</a>
-          <a href="#">Support</a>
+  <div class="st-wrapper">
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside class="st-sidebar">
+      <div class="st-sidebar-inner">
+
+        <div class="st-sidebar-brand">
+          <div class="st-brand-avatar">C</div>
+          <div>
+            <div class="st-brand-name">CFG TWPO</div>
+            <div class="st-brand-role">Admin Portal</div>
+          </div>
+        </div>
+
+        <nav class="st-nav">
+          <a href="#" class="st-nav-link st-nav-active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
+            Dashboard
+          </a>
+          <a href="#" class="st-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+            Inventory
+          </a>
+          <a href="#" class="st-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            Orders
+          </a>
+          <a href="#" class="st-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Customers
+          </a>
+          <a href="#" class="st-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+            Analytics
+          </a>
         </nav>
+
+        <div class="st-sidebar-footer">
+          <a href="#" class="st-nav-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93A10 10 0 0 0 4.93 19.07M4.93 4.93A10 10 0 0 1 19.07 19.07"/>
+            </svg>
+            Settings
+          </a>
+          <div class="st-user">
+            <div class="st-user-avatar">AR</div>
+            <div>
+              <div class="st-user-name">Alex Racer</div>
+              <div class="st-user-role">Super Admin</div>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </header>
+    </aside>
 
-    <!-- Stats Container -->
-    <div class="stats-container">
-      <div class="stats-title">
-        <h1>Estadísticas</h1>
-        <p>Panel de análisis y métricas del negocio</p>
-      </div>
+    <!-- ══ MAIN CONTENT ══ -->
+    <main class="st-main">
 
-      <!-- KPI Cards -->
-      <div class="stats-kpis">
-        <div class="stat-card">
-          <div class="stat-card-icon stat-card-icon-revenue"></div>
-          <div class="stat-card-label">Ingresos Totales</div>
-          <div class="stat-card-value">$124,500</div>
-          <div class="stat-card-change stat-card-change-positive">
-            <span class="stat-arrow">↑</span> 12%
-            <span class="stat-period">vs mes anterior</span>
+      <!-- Top header bar -->
+      <div class="st-topbar">
+        <h2 class="st-page-title">Overview</h2>
+        <div class="st-topbar-actions">
+          <div class="st-topbar-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="Search orders, parts, or customers..." />
           </div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-card-icon stat-card-icon-orders"></div>
-          <div class="stat-card-label">Pedidos Totales</div>
-          <div class="stat-card-value">1,240</div>
-          <div class="stat-card-change stat-card-change-positive">
-            <span class="stat-arrow">↑</span> 5%
-            <span class="stat-period">vs mes anterior</span>
+          <div class="st-date-picker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15,18 9,12 15,6"/>
+            </svg>
+            <span>Oct 2023</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9,18 15,12 9,6"/>
+            </svg>
+            <button class="st-calendar-btn" aria-label="Abrir calendario">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </button>
           </div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-card-icon stat-card-icon-visitors"></div>
-          <div class="stat-card-label">Visitantes Activos</div>
-          <div class="stat-card-value">3,847</div>
-          <div class="stat-card-change stat-card-change-positive">
-            <span class="stat-arrow">↑</span> 18%
-            <span class="stat-period">vs mes anterior</span>
-          </div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-card-icon stat-card-icon-products"></div>
-          <div class="stat-card-label">Productos Vendidos</div>
-          <div class="stat-card-value">2,156</div>
-          <div class="stat-card-change stat-card-change-positive">
-            <span class="stat-arrow">↑</span> 8%
-            <span class="stat-period">vs mes anterior</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Charts Section -->
-      <div class="stats-charts">
-        <div class="stats-chart">
-          <h3>Ventas por Categoría</h3>
-          <div class="stats-chart-content">
-            <div class="stat-bar-item">
-              <span class="stat-bar-label">Motores</span>
-              <div class="stat-bar-container">
-                <div class="stat-bar" style="width: 75%;"></div>
-              </div>
-              <span class="stat-bar-value">$45,200</span>
-            </div>
-            <div class="stat-bar-item">
-              <span class="stat-bar-label">Escape</span>
-              <div class="stat-bar-container">
-                <div class="stat-bar" style="width: 60%;"></div>
-              </div>
-              <span class="stat-bar-value">$32,400</span>
-            </div>
-            <div class="stat-bar-item">
-              <span class="stat-bar-label">Suspensión</span>
-              <div class="stat-bar-container">
-                <div class="stat-bar" style="width: 45%;"></div>
-              </div>
-              <span class="stat-bar-value">$24,300</span>
-            </div>
-            <div class="stat-bar-item">
-              <span class="stat-bar-label">Frenos</span>
-              <div class="stat-bar-container">
-                <div class="stat-bar" style="width: 35%;"></div>
-              </div>
-              <span class="stat-bar-value">$18,900</span>
-            </div>
-            <div class="stat-bar-item">
-              <span class="stat-bar-label">Accesorios</span>
-              <div class="stat-bar-container">
-                <div class="stat-bar" style="width: 20%;"></div>
-              </div>
-              <span class="stat-bar-value">$10,800</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="stats-chart">
-          <h3>Productos Más Vendidos</h3>
-          <div class="stats-product-list">
-            <div class="stat-product-item">
-              <span class="stat-product-rank">1</span>
-              <div class="stat-product-info">
-                <span class="stat-product-name">Titanium X-Pipe Exhaust</span>
-                <span class="stat-product-brand">TwPo Racing</span>
-              </div>
-              <span class="stat-product-sales">342 unidades</span>
-            </div>
-            <div class="stat-product-item">
-              <span class="stat-product-rank">2</span>
-              <div class="stat-product-info">
-                <span class="stat-product-name">Coilover Kit Pro</span>
-                <span class="stat-product-brand">CFG Performance</span>
-              </div>
-              <span class="stat-product-sales">287 unidades</span>
-            </div>
-            <div class="stat-product-item">
-              <span class="stat-product-rank">3</span>
-              <div class="stat-product-info">
-                <span class="stat-product-name">Stage 2 Turbocharger</span>
-                <span class="stat-product-brand">CFG Performance</span>
-              </div>
-              <span class="stat-product-sales">198 unidades</span>
-            </div>
-            <div class="stat-product-item">
-              <span class="stat-product-rank">4</span>
-              <div class="stat-product-info">
-                <span class="stat-product-name">Carbon Brake Caliper Set</span>
-                <span class="stat-product-brand">CFG Performance</span>
-              </div>
-              <span class="stat-product-sales">156 unidades</span>
-            </div>
-            <div class="stat-product-item">
-              <span class="stat-product-rank">5</span>
-              <div class="stat-product-info">
-                <span class="stat-product-name">Digital Racing Dashboard</span>
-                <span class="stat-product-brand">TwPo Racing</span>
-              </div>
-              <span class="stat-product-sales">124 unidades</span>
-            </div>
-          </div>
+          <button class="st-notif-btn" aria-label="Notificaciones">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="st-notif-dot"></span>
+          </button>
         </div>
       </div>
 
-      <!-- Recent Activity -->
-      <div class="stats-activity">
-        <h3>Actividad Reciente</h3>
-        <div class="stats-activity-list">
-          <div class="stat-activity-item">
-            <div class="stat-activity-dot stat-activity-dot-order"></div>
-            <div class="stat-activity-content">
-              <span class="stat-activity-title">Nuevo pedido #1247</span>
-              <span class="stat-activity-desc">Titanium X-Pipe Exhaust - $1,299.00</span>
+      <div class="st-content">
+
+        <!-- KPI Cards -->
+        <div class="st-kpis">
+          <div class="st-kpi">
+            <div class="st-kpi-bg st-kpi-bg-red"></div>
+            <div class="st-kpi-label">Total Revenue</div>
+            <div class="st-kpi-value">$124,500</div>
+            <div class="st-kpi-change st-change-up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+              <span>12%</span>
+              <span class="st-kpi-period">vs last month</span>
             </div>
-            <span class="stat-activity-time">Hace 2 min</span>
           </div>
-          <div class="stat-activity-item">
-            <div class="stat-activity-dot stat-activity-dot-review"></div>
-            <div class="stat-activity-content">
-              <span class="stat-activity-title">Nueva reseña</span>
-              <span class="stat-activity-desc">"Excelente calidad..." - ★★★★★</span>
+          <div class="st-kpi">
+            <div class="st-kpi-bg st-kpi-bg-gold"></div>
+            <div class="st-kpi-label">Total Orders</div>
+            <div class="st-kpi-value">1,240</div>
+            <div class="st-kpi-change st-change-up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+              <span>5%</span>
+              <span class="st-kpi-period">vs last month</span>
             </div>
-            <span class="stat-activity-time">Hace 15 min</span>
           </div>
-          <div class="stat-activity-item">
-            <div class="stat-activity-dot stat-activity-dot-stock"></div>
-            <div class="stat-activity-content">
-              <span class="stat-activity-title">Stock bajo</span>
-              <span class="stat-activity-desc">Stage 2 Turbocharger - 5 unidades restantes</span>
+          <div class="st-kpi">
+            <div class="st-kpi-bg st-kpi-bg-white"></div>
+            <div class="st-kpi-label">Active Visitors</div>
+            <div class="st-kpi-value">350</div>
+            <div class="st-kpi-change st-change-down">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>
+              <span>2%</span>
+              <span class="st-kpi-period">vs last week</span>
             </div>
-            <span class="stat-activity-time">Hace 1 hora</span>
           </div>
-          <div class="stat-activity-item">
-            <div class="stat-activity-dot stat-activity-dot-user"></div>
-            <div class="stat-activity-content">
-              <span class="stat-activity-title">Nuevo cliente registrado</span>
-              <span class="stat-activity-desc">Juan Pérez - Bogotá, Colombia</span>
+          <div class="st-kpi">
+            <div class="st-kpi-bg st-kpi-bg-gold"></div>
+            <div class="st-kpi-label">Pending Shipments</div>
+            <div class="st-kpi-value">45</div>
+            <div class="st-kpi-change st-change-up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18,15 12,9 6,15"/></svg>
+              <span>8%</span>
+              <span class="st-kpi-period">vs yesterday</span>
             </div>
-            <span class="stat-activity-time">Hace 3 horas</span>
           </div>
         </div>
+
+        <!-- Charts Row -->
+        <div class="st-charts-row">
+
+          <!-- Sales Overview Chart -->
+          <div class="st-card st-chart-card">
+            <div class="st-card-header">
+              <div>
+                <div class="st-card-title">Sales Overview</div>
+                <div class="st-card-subtitle">Revenue analytics across all channels</div>
+              </div>
+              <div class="st-toggle-group">
+                <button class="st-toggle-btn st-toggle-active">Weekly</button>
+                <button class="st-toggle-btn">Monthly</button>
+                <button class="st-toggle-btn">Yearly</button>
+              </div>
+            </div>
+            <div class="st-chart-area">
+              <div class="st-chart-bars">
+                <div class="st-bar-wrap" data-value="$4.2k">
+                  <div class="st-bar" style="height: 55%;"></div>
+                  <span class="st-bar-label">Mon</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$6.8k">
+                  <div class="st-bar st-bar-highlight" style="height: 72%;"></div>
+                  <span class="st-bar-label">Tue</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$5.1k">
+                  <div class="st-bar" style="height: 60%;"></div>
+                  <span class="st-bar-label">Wed</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$8.4k">
+                  <div class="st-bar st-bar-highlight" style="height: 88%;"></div>
+                  <span class="st-bar-label">Thu</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$6.2k">
+                  <div class="st-bar" style="height: 66%;"></div>
+                  <span class="st-bar-label">Fri</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$7.9k">
+                  <div class="st-bar" style="height: 80%;"></div>
+                  <span class="st-bar-label">Sat</span>
+                </div>
+                <div class="st-bar-wrap" data-value="$9.5k">
+                  <div class="st-bar st-bar-top" style="height: 100%;"></div>
+                  <span class="st-bar-label">Sun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Traffic Source Donut -->
+          <div class="st-card st-donut-card">
+            <div class="st-card-title">Traffic Source</div>
+            <div class="st-donut-wrap">
+              <svg class="st-donut-svg" viewBox="0 0 200 200">
+                <!-- Background ring -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#27272a" stroke-width="28"/>
+                <!-- Green 12% -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#1ED838" stroke-width="28"
+                  stroke-dasharray="52.78 387.22" stroke-dashoffset="0"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Gold 28% -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#E39B1D" stroke-width="28"
+                  stroke-dasharray="123.15 317.85" stroke-dashoffset="-52.78"
+                  transform="rotate(-90 100 100)"/>
+                <!-- Red 60% -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#DF201A" stroke-width="28"
+                  stroke-dasharray="263.89 176.11" stroke-dashoffset="-175.93"
+                  transform="rotate(-90 100 100)"/>
+              </svg>
+              <div class="st-donut-center">
+                <span class="st-donut-val">85%</span>
+                <span class="st-donut-sub">Total Growth</span>
+              </div>
+            </div>
+            <div class="st-traffic-legend">
+              <div class="st-legend-item">
+                <span class="st-legend-dot" style="background:#DF201A"></span>
+                <span>Direct</span>
+                <span class="st-legend-pct">60%</span>
+              </div>
+              <div class="st-legend-item">
+                <span class="st-legend-dot" style="background:#E39B1D"></span>
+                <span>Social</span>
+                <span class="st-legend-pct">28%</span>
+              </div>
+              <div class="st-legend-item">
+                <span class="st-legend-dot" style="background:#1ED838"></span>
+                <span>Referral</span>
+                <span class="st-legend-pct">12%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="st-bottom-row">
+
+          <!-- Recent Orders Table -->
+          <div class="st-card st-orders-card">
+            <div class="st-card-header">
+              <div class="st-card-title">Recent Orders</div>
+              <a href="#" class="st-link-red">View All</a>
+            </div>
+            <div class="st-table-wrap">
+              <table class="st-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th class="st-th-right">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="st-td-mono">#ORD-0092</td>
+                    <td>
+                      <div class="st-customer">
+                        <div class="st-avatar" style="background:#334155">JD</div>
+                        John Doe
+                      </div>
+                    </td>
+                    <td>
+                      <span class="st-status st-status-green">
+                        <span class="st-status-dot"></span>Delivered
+                      </span>
+                    </td>
+                    <td class="st-td-right">$1,299.00</td>
+                  </tr>
+                  <tr>
+                    <td class="st-td-mono">#ORD-0091</td>
+                    <td>
+                      <div class="st-customer">
+                        <div class="st-avatar" style="background:#7f1d1d; color:#fca5a5">MS</div>
+                        Mike Smith
+                      </div>
+                    </td>
+                    <td>
+                      <span class="st-status st-status-gold">
+                        <span class="st-status-dot"></span>Processing
+                      </span>
+                    </td>
+                    <td class="st-td-right">$850.50</td>
+                  </tr>
+                  <tr>
+                    <td class="st-td-mono">#ORD-0090</td>
+                    <td>
+                      <div class="st-customer">
+                        <div class="st-avatar" style="background:#312e81; color:#a5b4fc">AL</div>
+                        Anna Lee
+                      </div>
+                    </td>
+                    <td>
+                      <span class="st-status st-status-green">
+                        <span class="st-status-dot"></span>Delivered
+                      </span>
+                    </td>
+                    <td class="st-td-right">$245.00</td>
+                  </tr>
+                  <tr>
+                    <td class="st-td-mono">#ORD-0089</td>
+                    <td>
+                      <div class="st-customer">
+                        <div class="st-avatar" style="background:#134e4a; color:#5eead4">RK</div>
+                        Ryan King
+                      </div>
+                    </td>
+                    <td>
+                      <span class="st-status st-status-red">
+                        <span class="st-status-dot"></span>Cancelled
+                      </span>
+                    </td>
+                    <td class="st-td-right">$56.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Inventory Alerts -->
+          <div class="st-card st-alerts-card">
+            <div class="st-card-header">
+              <div class="st-card-header-left">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#E39B1D" stroke-width="2" width="18" height="18">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                  <line x1="12" y1="9" x2="12" y2="13"/>
+                  <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                <div class="st-card-title">Inventory Alerts</div>
+              </div>
+            </div>
+            <div class="st-alerts-list">
+              <div class="st-alert-item">
+                <div class="st-alert-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div class="st-alert-info">
+                  <span class="st-alert-name">P-Zero Race Tires</span>
+                  <span class="st-alert-sku">SKU: TR-2023-X</span>
+                </div>
+                <div class="st-alert-right">
+                  <span class="st-badge st-badge-gold">Low Stock</span>
+                  <span class="st-alert-count">5 Left</span>
+                </div>
+              </div>
+              <div class="st-alert-item">
+                <div class="st-alert-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div class="st-alert-info">
+                  <span class="st-alert-name">Carbon Brake Calipers</span>
+                  <span class="st-alert-sku">SKU: BR-99-C</span>
+                </div>
+                <div class="st-alert-right">
+                  <span class="st-badge st-badge-red">Out of Stock</span>
+                  <span class="st-alert-count">0 Left</span>
+                </div>
+              </div>
+              <div class="st-alert-item">
+                <div class="st-alert-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div class="st-alert-info">
+                  <span class="st-alert-name">GT Racing Helmet</span>
+                  <span class="st-alert-sku">SKU: HL-GT-01</span>
+                </div>
+                <div class="st-alert-right">
+                  <span class="st-badge st-badge-gold">Low Stock</span>
+                  <span class="st-alert-count">3 Left</span>
+                </div>
+              </div>
+              <div class="st-alert-item">
+                <div class="st-alert-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div class="st-alert-info">
+                  <span class="st-alert-name">Front Bumper Kit</span>
+                  <span class="st-alert-sku">SKU: BK-FR-22</span>
+                </div>
+                <div class="st-alert-right">
+                  <span class="st-badge st-badge-gold">Low Stock</span>
+                  <span class="st-alert-count">8 Left</span>
+                </div>
+              </div>
+            </div>
+            <div class="st-alerts-footer">
+              <button class="st-restock-btn">Restock Inventory</button>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </main>
   </div>
-</Layout>
+
+</div>
+</SharedLayout>
 
 <style>
-  .stats-page { min-height: 100vh; background: #0d0d0d; color: #fff; font-family: 'Space Grotesk', sans-serif; }
-  
-  /* Header */
-  .stats-header { background: #000; border-bottom: 1px solid rgba(255,255,255,.08); }
-  .stats-header-inner { max-width: 1400px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 2rem; }
-  .stats-logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; flex-shrink: 0; }
-  .stats-logo-icon { width: 24px; height: 18px; background: #DF201A; clip-path: polygon(10% 0,90% 0,100% 100%,0 100%); }
-  .stats-logo-div { width: 1px; height: 22px; background: rgba(255,255,255,.2); transform: rotate(12deg); }
-  .stats-logo span { font-size: 1rem; font-weight: 700; letter-spacing: .06em; color: #fff; }
-  .stats-nav { display: flex; gap: 1.5rem; }
-  .stats-nav a { color: rgba(255,255,255,.5); text-decoration: none; font-weight: 600; transition: color .15s; }
-  .stats-nav a:hover { color: #fff; }
+  .st-page {
+    background: #111;
+    min-height: calc(100vh - 57px);
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+  }
+  .st-wrapper {
+    display: flex;
+    min-height: calc(100vh - 57px);
+  }
 
-  /* Container */
-  .stats-container { max-width: 1400px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-  
-  /* Title */
-  .stats-title { margin-bottom: 2rem; }
-  .stats-title h1 { font-size: 2rem; font-weight: 700; margin-bottom: .5rem; }
-  .stats-title p { color: rgba(255,255,255,.5); }
+  /* ══ SIDEBAR ══ */
+  .st-sidebar {
+    width: 256px;
+    flex-shrink: 0;
+    background: #000;
+    border-right: 1px solid rgba(255,255,255,.05);
+  }
+  .st-sidebar-inner {
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    overflow-y: auto;
+  }
+  .st-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .5rem .5rem 1.75rem;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    margin-bottom: 1rem;
+  }
+  .st-brand-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #DF201A, #E39B1D);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .st-brand-name { font-size: .9rem; font-weight: 700; line-height: 1; margin-bottom: .2rem; }
+  .st-brand-role { font-size: .72rem; color: rgba(255,255,255,.4); }
+  .st-nav { flex: 1; display: flex; flex-direction: column; gap: .25rem; }
+  .st-nav-link {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .7rem 1rem;
+    border-radius: 8px;
+    color: rgba(255,255,255,.55);
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 500;
+    transition: background .15s, color .15s;
+  }
+  .st-nav-link svg { width: 17px; height: 17px; flex-shrink: 0; }
+  .st-nav-link:hover { background: rgba(255,255,255,.05); color: #fff; }
+  .st-nav-active {
+    background: #DF201A !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(223,32,26,.25);
+  }
+  .st-sidebar-footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,.05);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .st-user {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .6rem 1rem;
+  }
+  .st-user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    border: 2px solid rgba(223,32,26,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .st-user-name { font-size: .85rem; font-weight: 600; line-height: 1; margin-bottom: .15rem; }
+  .st-user-role { font-size: .7rem; color: rgba(255,255,255,.4); }
+
+  /* ══ MAIN ══ */
+  .st-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .st-topbar {
+    background: rgba(17,17,17,.95);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    padding: .9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 57px;
+    z-index: 10;
+  }
+  .st-page-title { font-size: 1.5rem; font-weight: 700; }
+  .st-topbar-actions { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; }
+  .st-topbar-search {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px;
+    padding: .5rem .75rem;
+    width: 260px;
+  }
+  .st-topbar-search svg { width: 14px; height: 14px; color: rgba(255,255,255,.35); flex-shrink: 0; }
+  .st-topbar-search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: .82rem;
+    flex: 1;
+  }
+  .st-topbar-search input::placeholder { color: rgba(255,255,255,.3); }
+  .st-date-picker {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 8px;
+    padding: .45rem .75rem;
+    font-size: .82rem;
+    color: rgba(255,255,255,.7);
+  }
+  .st-date-picker svg { width: 12px; height: 12px; color: rgba(255,255,255,.4); }
+  .st-calendar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255,255,255,.5);
+    padding: .1rem;
+    line-height: 0;
+  }
+  .st-calendar-btn svg { width: 14px; height: 14px; }
+  .st-notif-btn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255,255,255,.7);
+    padding: .4rem;
+  }
+  .st-notif-btn svg { width: 18px; height: 18px; display: block; }
+  .st-notif-dot {
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    width: 8px;
+    height: 8px;
+    background: #DF201A;
+    border-radius: 50%;
+    border: 2px solid #111;
+  }
+
+  .st-content { padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; }
 
   /* KPIs */
-  .stats-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-  .stat-card { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; position: relative; overflow: hidden; }
-  .stat-card-icon { position: absolute; top: 1rem; right: 1rem; width: 48px; height: 48px; border-radius: 12px; opacity: .15; }
-  .stat-card-icon-revenue { background: #DF201A; }
-  .stat-card-icon-orders { background: #E39B1D; }
-  .stat-card-icon-visitors { background: #1ED838; }
-  .stat-card-icon-products { background: #3B82F6; }
-  .stat-card-label { font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; }
-  .stat-card-value { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
-  .stat-card-change { display: flex; align-items: center; gap: .5rem; font-size: .85rem; }
-  .stat-card-change-positive { color: #1ED838; }
-  .stat-arrow { font-weight: 700; }
-  .stat-period { color: rgba(255,255,255,.4); }
+  .st-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .st-kpi {
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .st-kpi-bg {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    width: 56px;
+    height: 40px;
+    border-radius: 8px;
+    opacity: .1;
+  }
+  .st-kpi-bg-red { background: #DF201A; }
+  .st-kpi-bg-gold { background: #E39B1D; }
+  .st-kpi-bg-white { background: #fff; }
+  .st-kpi-label { font-size: .8rem; color: rgba(255,255,255,.45); margin-bottom: .4rem; }
+  .st-kpi-value { font-size: 1.75rem; font-weight: 700; margin-bottom: .75rem; }
+  .st-kpi-change { display: flex; align-items: center; gap: .3rem; font-size: .8rem; font-weight: 700; }
+  .st-kpi-change svg { width: 14px; height: 14px; }
+  .st-change-up { color: #1ED838; }
+  .st-change-down { color: #DF201A; }
+  .st-kpi-period { color: rgba(255,255,255,.35); font-weight: 400; font-size: .75rem; }
 
-  /* Charts */
-  .stats-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
-  @media (max-width: 900px) { .stats-charts { grid-template-columns: 1fr; } }
-  
-  .stats-chart { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; }
-  .stats-chart h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
+  /* Charts row */
+  .st-charts-row { display: grid; grid-template-columns: 1fr 280px; gap: 1.25rem; }
 
-  /* Bar Chart */
-  .stat-bar-item { display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-  .stat-bar-label { font-size: .85rem; color: rgba(255,255,255,.7); }
-  .stat-bar-container { height: 24px; background: rgba(255,255,255,.05); border-radius: 4px; overflow: hidden; }
-  .stat-bar { height: 100%; background: linear-gradient(90deg, #DF201A, #c01b15); border-radius: 4px; }
-  .stat-bar-value { font-size: .85rem; font-weight: 600; text-align: right; }
+  /* Card base */
+  .st-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .st-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .st-card-header-left { display: flex; align-items: center; gap: .5rem; }
+  .st-card-title { font-size: 1rem; font-weight: 700; }
+  .st-card-subtitle { font-size: .75rem; color: rgba(255,255,255,.4); margin-top: .15rem; }
+  .st-toggle-group { display: flex; background: #111; border-radius: 8px; padding: .2rem; gap: .1rem; }
+  .st-toggle-btn {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,.4);
+    font-family: inherit;
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .3rem .65rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+  }
+  .st-toggle-active { background: rgba(255,255,255,.1) !important; color: #fff !important; }
 
-  /* Product List */
-  .stat-product-item { display: flex; align-items: center; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
-  .stat-product-item:last-child { border-bottom: none; }
-  .stat-product-rank { width: 28px; height: 28px; background: rgba(255,255,255,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; }
-  .stat-product-info { flex: 1; display: flex; flex-direction: column; }
-  .stat-product-name { font-weight: 600; }
-  .stat-product-brand { font-size: .8rem; color: rgba(255,255,255,.5); }
-  .stat-product-sales { font-size: .85rem; color: #1ED838; }
+  /* Chart area */
+  .st-chart-area { padding: 1rem 1.5rem 1.5rem; }
+  .st-chart-bars { display: flex; align-items: flex-end; gap: .75rem; height: 180px; }
+  .st-bar-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+  }
+  .st-bar-wrap:hover .st-bar { opacity: 1; filter: brightness(1.2); }
+  .st-bar {
+    width: 100%;
+    background: rgba(227,155,29,.2);
+    border-radius: 4px 4px 0 0;
+    border-top: 2px solid #E39B1D;
+    transition: filter .15s;
+    opacity: .7;
+  }
+  .st-bar-highlight { background: rgba(227,155,29,.35); opacity: 1; }
+  .st-bar-top { background: rgba(227,155,29,.45); opacity: 1; }
+  .st-bar-label { font-size: .7rem; color: rgba(255,255,255,.4); white-space: nowrap; }
 
-  /* Activity */
-  .stats-activity { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; }
-  .stats-activity h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
-  
-  .stat-activity-item { display: flex; align-items: center; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
-  .stat-activity-item:last-child { border-bottom: none; }
-  .stat-activity-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .stat-activity-dot-order { background: #1ED838; }
-  .stat-activity-dot-review { background: #E39B1D; }
-  .stat-activity-dot-stock { background: #EF4444; }
-  .stat-activity-dot-user { background: #3B82F6; }
-  .stat-activity-content { flex: 1; display: flex; flex-direction: column; }
-  .stat-activity-title { font-weight: 600; font-size: .9rem; }
-  .stat-activity-desc { font-size: .8rem; color: rgba(255,255,255,.5); }
-  .stat-activity-time { font-size: .75rem; color: rgba(255,255,255,.4); }
+  /* Tooltip on hover */
+  .st-bar-wrap::before {
+    content: attr(data-value);
+    position: absolute;
+    top: -30px;
+    background: #111;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 4px;
+    padding: .15rem .5rem;
+    font-size: .7rem;
+    color: #fff;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s;
+  }
+  .st-bar-wrap:hover::before { opacity: 1; }
+
+  /* Donut */
+  .st-donut-card { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+  .st-donut-wrap { position: relative; display: flex; align-items: center; justify-content: center; }
+  .st-donut-svg { width: 160px; height: 160px; }
+  .st-donut-center {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .st-donut-val { font-size: 1.6rem; font-weight: 700; line-height: 1; }
+  .st-donut-sub { font-size: .65rem; color: rgba(255,255,255,.4); margin-top: .2rem; }
+  .st-traffic-legend { display: flex; flex-direction: column; gap: .5rem; }
+  .st-legend-item { display: flex; align-items: center; gap: .5rem; font-size: .83rem; }
+  .st-legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .st-legend-item span:nth-child(2) { flex: 1; color: rgba(255,255,255,.7); }
+  .st-legend-pct { font-weight: 700; color: #fff; }
+
+  /* Bottom row */
+  .st-bottom-row { display: grid; grid-template-columns: 1fr 340px; gap: 1.25rem; }
+
+  /* Table */
+  .st-orders-card { display: flex; flex-direction: column; }
+  .st-link-red { font-size: .82rem; color: #DF201A; text-decoration: none; font-weight: 600; }
+  .st-link-red:hover { color: #f03c36; }
+  .st-table-wrap { overflow-x: auto; }
+  .st-table { width: 100%; border-collapse: collapse; }
+  .st-table th {
+    padding: .6rem 1.5rem;
+    text-align: left;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    background: #111;
+  }
+  .st-th-right { text-align: right; }
+  .st-table td { padding: .9rem 1.5rem; border-top: 1px solid rgba(255,255,255,.04); font-size: .85rem; }
+  .st-table tbody tr:hover { background: rgba(255,255,255,.02); }
+  .st-td-mono { font-family: 'Space Mono', monospace; font-size: .8rem; color: rgba(255,255,255,.6); }
+  .st-td-right { text-align: right; font-weight: 600; }
+  .st-customer { display: flex; align-items: center; gap: .6rem; }
+  .st-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .65rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .st-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .2rem .65rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 600;
+  }
+  .st-status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .st-status-green { background: rgba(30,216,56,.1); color: #1ED838; border: 1px solid rgba(30,216,56,.2); }
+  .st-status-green .st-status-dot { background: #1ED838; }
+  .st-status-gold { background: rgba(227,155,29,.1); color: #E39B1D; border: 1px solid rgba(227,155,29,.2); }
+  .st-status-gold .st-status-dot { background: #E39B1D; }
+  .st-status-red { background: rgba(223,32,26,.1); color: #DF201A; border: 1px solid rgba(223,32,26,.2); }
+  .st-status-red .st-status-dot { background: #DF201A; }
+
+  /* Alerts */
+  .st-alerts-card { display: flex; flex-direction: column; }
+  .st-alerts-list { flex: 1; padding: .75rem 1rem; display: flex; flex-direction: column; gap: .6rem; }
+  .st-alert-item {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background: #111;
+    border: 1px solid rgba(255,255,255,.05);
+    border-radius: 8px;
+    padding: .75rem;
+  }
+  .st-alert-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,.05);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(255,255,255,.35);
+  }
+  .st-alert-icon svg { width: 16px; height: 16px; }
+  .st-alert-info { flex: 1; display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+  .st-alert-name { font-size: .83rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .st-alert-sku { font-size: .7rem; color: rgba(255,255,255,.4); }
+  .st-alert-right { display: flex; flex-direction: column; align-items: flex-end; gap: .25rem; flex-shrink: 0; }
+  .st-badge {
+    font-size: .6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: .15rem .5rem;
+    border-radius: 3px;
+  }
+  .st-badge-gold { background: rgba(227,155,29,.12); color: #E39B1D; border: 1px solid rgba(227,155,29,.2); }
+  .st-badge-red { background: rgba(223,32,26,.12); color: #DF201A; border: 1px solid rgba(223,32,26,.2); }
+  .st-alert-count { font-size: .75rem; color: rgba(255,255,255,.6); font-weight: 600; }
+  .st-alerts-footer { padding: .75rem 1rem; background: rgba(0,0,0,.3); border-top: 1px solid rgba(255,255,255,.05); }
+  .st-restock-btn {
+    width: 100%;
+    padding: .6rem;
+    background: rgba(223,32,26,.1);
+    border: 1px solid rgba(223,32,26,.2);
+    border-radius: 8px;
+    color: #DF201A;
+    font-family: inherit;
+    font-size: .83rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .st-restock-btn:hover { background: rgba(223,32,26,.2); }
+
+  /* ══ RESPONSIVE ══ */
+  @media (max-width: 1200px) {
+    .st-kpis { grid-template-columns: repeat(2, 1fr); }
+    .st-charts-row { grid-template-columns: 1fr; }
+    .st-bottom-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 900px) {
+    .st-sidebar { display: none; }
+    .st-content { padding: 1.25rem; }
+    .st-topbar { padding: .75rem 1.25rem; }
+  }
+  @media (max-width: 600px) {
+    .st-kpis { grid-template-columns: 1fr; }
+    .st-topbar-search { width: auto; flex: 1; }
+    .st-date-picker { display: none; }
+  }
 </style>
