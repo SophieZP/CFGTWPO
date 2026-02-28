@@ -1,4 +1,4 @@
-/* Tailwind CSS v4 - Import */
+/* Tailwind CSS v4 */
 @import "tailwindcss";
 
 @theme {
@@ -19,68 +19,4 @@
   /* Fonts */
   --font-sans: 'Space Grotesk', system-ui, sans-serif;
   --font-mono: 'Space Mono', monospace;
-}
-
-/* Base Styles */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-bg-main text-text-primary font-sans min-h-screen antialiased;
-  }
-
-  * {
-    @apply border-border;
-  }
-}
-
-/* Custom Utility Classes */
-@layer utilities {
-  /* Text colors */
-  .text-muted {
-    @apply text-text-secondary;
-  }
-  
-  /* Backgrounds */
-  .bg-card {
-    @apply bg-bg-card;
-  }
-  
-  /* Border */
-  .border-subtle {
-    @apply border-white/[0.08];
-  }
-  
-  /* Red accent */
-  .text-red {
-    @apply text-red;
-  }
-  
-  .bg-red {
-    @apply bg-red;
-  }
-  
-  .border-red {
-    @apply border-red;
-  }
-  
-  /* Gold accent */
-  .text-gold {
-    @apply text-gold;
-  }
-  
-  .bg-gold {
-    @apply bg-gold;
-  }
-  
-  /* Green accent */
-  .text-green {
-    @apply text-green;
-  }
-  
-  .bg-green {
-    @apply bg-green;
-  }
 }
