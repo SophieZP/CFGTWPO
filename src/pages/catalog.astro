@@ -1,8 +1,8 @@
 ---
-import CatalogComponent from "../components/catalog/catalog.astro";
-import Layout from "../layouts/Layout.astro";
+import MainLayout from '../layouts/MainLayout.astro';
+import CatalogPage from '../components/sections/CatalogPage.astro';
 ---
 
-<Layout>
-	<CatalogComponent />
-</Layout>
+<MainLayout title="Catálogo - CFG TWPO" activePage="catalog">
+  <CatalogPage />
+</MainLayout>

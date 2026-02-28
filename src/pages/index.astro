@@ -1,8 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Landingpage from '../components/landingpage/landingpage.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import Categories from '../components/sections/Categories.astro';
+import FeaturedProducts from '../components/sections/FeaturedProducts.astro';
 ---
 
-<Layout>
-  <Landingpage />
-</Layout>
+<MainLayout title="CFG TWPO - Performance Parts" activePage="home">
+  <Hero />
+  <Categories />
+  <FeaturedProducts />
+</MainLayout>

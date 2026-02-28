@@ -1,0 +1,112 @@
+---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = 'home' } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Inicio', page: 'home' },
+  { href: '/catalog', label: 'Catálogo', page: 'catalog' },
+  { href: '/catalog?filter=new', label: 'Nuevos', page: 'new' },
+  { href: '/stadistics', label: 'Estadísticas', page: 'stats' },
+];
+---
+
+<header class="sticky top-0 z-50 bg-black border-b border-white/[0.08]">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-14 gap-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 shrink-0">
+        <div class="w-5 h-4 bg-[#DF201A] clip-polygon"></div>
+        <div class="w-px h-5 bg-white/20 rotate-[12deg]"></div>
+        <span class="text-sm font-bold tracking-wider text-white whitespace-nowrap">CFG TWPO</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 flex-1 justify-center">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'text-xs font-semibold uppercase tracking-wider transition-colors duration-150 whitespace-nowrap',
+              activePage === link.page 
+                ? 'text-[#DF201A]' 
+                : 'text-white/50 hover:text-white'
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Search & Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <div class="hidden lg:flex items-center gap-2 bg-[#1a1a1a] border border-white/10 rounded-lg px-3 py-2">
+          <svg class="w-3.5 h-3.5 text-white/40 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input 
+            type="text" 
+            placeholder="Buscar..." 
+            class="bg-transparent border-none outline-none text-sm text-white w-32 xl:w-40 placeholder:text-white/30"
+          />
+        </div>
+
+        <!-- Cart -->
+        <button class="relative p-2 text-white hover:text-white/80 transition-colors" aria-label="Carrito">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[#DF201A] rounded-full text-[0.35rem] font-bold flex items-center justify-center">3</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button 
+          id="mobile-menu-btn" 
+          class="md:hidden flex flex-col gap-1 p-2"
+          aria-label="Menú"
+        >
+          <span class="w-5 h-0.5 bg-white rounded"></span>
+          <span class="w-5 h-0.5 bg-white rounded"></span>
+          <span class="w-5 h-0.5 bg-white rounded"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="hidden md:hidden bg-black border-t border-white/06 flex-col gap-1 p-4">
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class:list={[
+          'block px-3 py-2 text-sm font-semibold rounded-md transition-colors',
+          activePage === link.page 
+            ? 'bg-white/05 text-[#DF201A]' 
+            : 'text-white/60 hover:bg-white/05 hover:text-white'
+        ]}
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const nav = document.getElementById('mobile-nav');
+  
+  btn?.addEventListener('click', () => {
+    nav?.classList.toggle('hidden');
+    nav?.classList.toggle('flex');
+  });
+</script>
+
+<style>
+  .clip-polygon {
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+</style>

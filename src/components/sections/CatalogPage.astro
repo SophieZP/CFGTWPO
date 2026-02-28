@@ -1,0 +1,326 @@
+---
+import exhaustImage from '../../assets/Titanium Exhaust Tip-015.jpg';
+import suspensionImage from '../../assets/Suspension Kit-016.jpg';
+import steeringImage from '../../assets/Steering Wheel-017.jpg';
+import wheelImage from '../../assets/Alloy Wheel-018.jpg';
+import dashImage from '../../assets/Digital Dash-019.jpg';
+import turboImage from '../../assets/Turbocharger-008.jpg';
+import intakeImage from '../../assets/Engine block assembly-012.jpg';
+import brakeImage from '../../assets/Brake disc rotor-007.jpg';
+
+const products = [
+  {
+    id: 'titanium-xpipe',
+    image: exhaustImage,
+    name: 'Titanium X-Pipe Exhaust',
+    brand: 'TwPo Racing • Series 500',
+    price: 1299.00,
+    rating: 4,
+    stock: 'available',
+  },
+  {
+    id: 'coilover-kit',
+    image: suspensionImage,
+    name: 'Coilover Kit Pro',
+    brand: 'CFG Performance • Track Ready',
+    price: 2450.00,
+    rating: 5,
+    stock: 'available',
+  },
+  {
+    id: 'carbon-steering',
+    image: steeringImage,
+    name: 'Carbon Fiber Steering Wheel',
+    brand: 'TwPo Racing • Interior',
+    price: 899.00,
+    rating: 4,
+    stock: 'preorder',
+  },
+  {
+    id: 'monoblock-wheels',
+    image: wheelImage,
+    name: 'Monoblock Forged Wheels 19"',
+    brand: 'CFG Performance • 19 Inch',
+    price: 3200.00,
+    rating: 3,
+    stock: 'available',
+  },
+  {
+    id: 'digital-dashboard',
+    image: dashImage,
+    name: 'Digital Racing Dashboard',
+    brand: 'TwPo Racing • Electronics',
+    price: 1850.00,
+    rating: 5,
+    stock: 'available',
+  },
+  {
+    id: 'turbocharger-stage2',
+    image: turboImage,
+    name: 'Stage 2 Turbocharger Kit',
+    brand: 'CFG Performance • Induction',
+    price: 2100.00,
+    rating: 5,
+    stock: 'lowstock',
+  },
+  {
+    id: 'intake-manifold',
+    image: intakeImage,
+    name: 'High-Flow Intake Manifold',
+    brand: 'TwPo Racing • Engine',
+    price: 680.00,
+    rating: 4,
+    stock: 'available',
+  },
+  {
+    id: 'carbon-calipers',
+    image: brakeImage,
+    name: 'Carbon Brake Caliper Set',
+    brand: 'CFG Performance • Braking',
+    price: 1120.00,
+    rating: 5,
+    stock: 'available',
+  },
+];
+
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(price);
+};
+
+const getStockClass = (stock: string) => {
+  switch (stock) {
+    case 'available':
+      return 'bg-black/60 border border-[#1ED838]/80 text-[#1ED838]';
+    case 'preorder':
+      return 'bg-black/60 border border-[#DF201A]/80 text-[#DF201A]';
+    case 'lowstock':
+      return 'bg-black/60 border border-white/30 text-white/60';
+    default:
+      return 'bg-black/60 border border-white/30 text-white/60';
+  }
+};
+
+const getStockText = (stock: string) => {
+  switch (stock) {
+    case 'available':
+      return 'In Stock';
+    case 'preorder':
+      return 'Pre-Order';
+    case 'lowstock':
+      return 'Low Stock';
+    default:
+      return 'In Stock';
+  }
+};
+---
+
+<!-- Page Content -->
+<div class="flex">
+  
+  <!-- Sidebar -->
+  <aside class="hidden lg:block w-[272px] shrink-0 bg-black border-r border-white/07 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto">
+    <div class="p-6 flex flex-col gap-8">
+      
+      <!-- Filter Header -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-3.5 h-2.5 bg-[#DF201A] clip-polygon"></div>
+          <span class="text-sm font-bold text-white">Filtros</span>
+        </div>
+        <button class="text-[0.7rem] font-bold uppercase tracking-wider text-white/35 hover:text-white transition-colors">
+          Reset
+        </button>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="flex flex-col gap-3">
+        <h3 class="text-[0.7rem] font-bold uppercase tracking-wider text-white/50">Categoría</h3>
+        <div class="flex flex-col gap-1">
+          {['Engine Components', 'Exhaust Systems', 'Suspension', 'Braking', 'Interior'].map((cat, i) => (
+            <label class="flex items-center gap-2 cursor-pointer group">
+              <input 
+                type="checkbox" 
+                checked={i === 1}
+                class="w-3.5 h-3.5 accent-[#DF201A] cursor-pointer"
+              />
+              <span class:list={[
+                'text-sm transition-colors',
+                i === 1 ? 'text-white/85' : 'text-white/50 group-hover:text-white'
+              ]}>
+                {cat}
+              </span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <!-- Price Range -->
+      <div class="flex flex-col gap-3">
+        <h3 class="text-[0.7rem] font-bold uppercase tracking-wider text-white/50">Rango de Precio</h3>
+        <input 
+          type="range" 
+          min="50" 
+          max="5000" 
+          value="2500"
+          class="w-full accent-[#DF201A] cursor-pointer"
+        />
+        <div class="flex justify-between text-[0.72rem] text-[#E39B1D]">
+          <span>$50</span>
+          <span>$5000+</span>
+        </div>
+      </div>
+
+      <!-- Brand Filter -->
+      <div class="flex flex-col gap-3">
+        <h3 class="text-[0.7rem] font-bold uppercase tracking-wider text-white/50">Marca</h3>
+        <div class="flex flex-col gap-2">
+          {[
+            { name: 'CFG Performance', checked: false },
+            { name: 'TwPo Racing', checked: true }
+          ].map((brand) => (
+            <label class:list={[
+              'flex items-center justify-between p-2.5 rounded bg-[#1a1a1a] border cursor-pointer transition-all',
+              brand.checked 
+                ? 'border-[rgba(223,32,26,0.4)] shadow-[0_0_10px_rgba(223,32,26,0.1)] text-white' 
+                : 'border-transparent text-white/60 hover:border-white/10'
+            ]}>
+              <span class="text-sm">{brand.name}</span>
+              <input 
+                type="radio" 
+                name="brand" 
+                checked={brand.checked}
+                class="w-3.5 h-3.5 accent-[#DF201A]"
+              />
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <!-- Compatibility -->
+      <div class="flex flex-col gap-3">
+        <h3 class="text-[0.7rem] font-bold uppercase tracking-wider text-white/50">Compatibilidad</h3>
+        <select class="w-full bg-[#1a1a1a] border border-white/12 rounded-lg text-white text-sm p-2.5 outline-none focus:border-[rgba(223,32,26,0.4)] cursor-pointer">
+          <option value="">Select Year</option>
+          <option>2023</option>
+          <option>2022</option>
+          <option>2021</option>
+        </select>
+        <select class="w-full bg-[#1a1a1a] border border-white/12 rounded-lg text-white text-sm p-2.5 outline-none focus:border-[rgba(223,32,26,0.4)] cursor-pointer">
+          <option value="">Select Model</option>
+          <option>Sport 500</option>
+          <option>Track 600</option>
+        </select>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6 lg:p-8">
+    
+    <!-- Top Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/07 mb-4">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-sm">
+        <a href="/catalog" class="text-white/40 hover:text-white transition-colors">Catálogo</a>
+        <span class="text-white/20">/</span>
+        <span class="text-white">Performance Exhausts</span>
+      </div>
+      
+      <!-- Sort -->
+      <div class="flex items-center gap-2">
+        <span class="text-sm text-white/40">Sort by:</span>
+        <select class="bg-transparent border-none text-white font-bold text-sm outline-none cursor-pointer">
+          <option class="bg-[#1a1a1a]">Relevance</option>
+          <option class="bg-[#1a1a1a]">Price: Low to High</option>
+          <option class="bg-[#1a1a1a]">Price: High to Low</option>
+          <option class="bg-[#1a1a1a]">Rating</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results Count -->
+    <p class="text-sm text-white/40 mb-6">
+      Showing <strong class="text-white">{products.length}</strong> results for <em class="text-white font-normal">"TwPo Racing"</em>
+    </p>
+
+    <!-- Mobile Filter Button -->
+    <button 
+      id="filter-toggle"
+      class="lg:hidden flex items-center gap-2 bg-white/08 border border-white/15 text-white px-4 py-2 rounded-md text-sm font-semibold mb-6"
+    >
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+        <line x1="12" y1="18" x2="12" y2="18"/>
+      </svg>
+      Filtros
+    </button>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 mb-10">
+      {products.map((product) => (
+        <a 
+          href={`/products/${product.id}`}
+          class="group flex flex-col bg-black border border-white/08 rounded-lg overflow-hidden hover:border-white/20 hover:-translate-y-1 transition-all duration-200"
+        >
+          <!-- Image -->
+          <div class="relative aspect-square overflow-hidden">
+            <img 
+              src={product.image.src} 
+              alt={product.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <span class={getStockClass(product.stock)}>
+              {getStockText(product.stock)}
+            </span>
+          </div>
+
+          <!-- Info -->
+          <div class="p-4 flex flex-col">
+            <h3 class="text-sm font-bold text-white leading-tight mb-1 group-hover:text-[#DF201A] transition-colors">
+              {product.name}
+            </h3>
+            <p class="text-xs text-white/35 mb-3">{product.brand}</p>
+            <div class="flex items-center justify-between mt-auto pt-3 border-t border-white/08">
+              <span class="text-sm font-extrabold text-[#E39B1D]">{formatPrice(product.price)}</span>
+              <span class="text-[#E39B1D] text-xs">
+                {'★'.repeat(product.rating)}
+                {'☆'.repeat(5 - product.rating)}
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Pagination -->
+    <nav class="flex items-center justify-center gap-1 flex-wrap">
+      <button class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] border border-white/12 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors" aria-label="Anterior">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="15,18 9,12 15,6"/>
+        </svg>
+      </button>
+      <button class="w-10 h-10 flex items-center justify-center bg-[#DF201A] border border-[#DF201A] rounded-lg text-white font-semibold">1</button>
+      <button class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] border border-white/12 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors">2</button>
+      <button class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] border border-white/12 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors">3</button>
+      <span class="text-white/30 px-2">…</span>
+      <button class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] border border-white/12 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors">8</button>
+      <button class="w-10 h-10 flex items-center justify-center bg-[#1a1a1a] border border-white/12 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-colors" aria-label="Siguiente">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="9,18 15,12 9,6"/>
+        </svg>
+      </button>
+    </nav>
+
+  </main>
+</div>
+
+<style>
+  .clip-polygon {
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+  }
+</style>

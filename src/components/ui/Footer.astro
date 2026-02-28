@@ -1,0 +1,131 @@
+---
+const currentYear = new Date().getFullYear();
+
+const shopLinks = [
+  { href: '/catalog?category=motorcycles', label: 'Motocicletas' },
+  { href: '/catalog?category=cars', label: 'Carros' },
+  { href: '/catalog?category=accessories', label: 'Accesorios' },
+  { href: '/catalog?filter=new', label: 'Estrenos' },
+];
+
+const supportLinks = [
+  { href: '#', label: 'Rastreo de pedido' },
+  { href: '#', label: 'Devoluciones y cambios' },
+  { href: '#', label: 'Información de envío' },
+  { href: '/stadistics', label: 'Estadísticas' },
+  { href: '#', label: 'Contacto' },
+];
+---
+
+<footer class="bg-black border-t border-white/[0.08]">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-10">
+      
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4">
+          <div class="w-5 h-4 bg-[#DF201A] clip-polygon"></div>
+          <div class="w-px h-5 bg-white/20 rotate-[12deg]"></div>
+          <span class="text-sm font-bold tracking-wider text-white">CFG TWPO</span>
+        </a>
+        <p class="text-sm text-white/40 leading-relaxed max-w-[240px] mb-4">
+          Performance parts engineered for speed, durability, and precision. Elevate your machine with CFG TWPO.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-white/30 hover:text-white transition-colors" aria-label="Instagram">
+            <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white/30 hover:text-white transition-colors" aria-label="Facebook">
+            <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white/30 hover:text-white transition-colors" aria-label="YouTube">
+            <svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+              <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Shop Links -->
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.12em] uppercase text-white pl-3 border-l-2 border-[#DF201A] mb-4">
+          Shop
+        </h4>
+        <ul class="flex flex-col gap-2">
+          {shopLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-white/40 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Support Links -->
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.12em] uppercase text-white pl-3 border-l-2 border-[#DF201A] mb-4">
+          Support
+        </h4>
+        <ul class="flex flex-col gap-2">
+          {supportLinks.map((link) => (
+            <li>
+              <a href={link.href} class="text-sm text-white/40 hover:text-white transition-colors">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.12em] uppercase text-white pl-3 border-l-2 border-[#DF201A] mb-4">
+          Newsletter
+        </h4>
+        <p class="text-sm text-white/40 mb-3 leading-relaxed">
+          Únete para ofertas exclusivas y lanzamientos de productos
+        </p>
+        <form class="flex border border-white/15 rounded overflow-hidden">
+          <input 
+            type="email" 
+            placeholder="Tu correo electrónico"
+            class="flex-1 bg-[#0d0d0d] border-none outline-none text-sm text-white px-3 py-2 placeholder:text-white/25"
+          />
+          <button 
+            type="submit"
+            class="bg-[#DF201A] border-none px-3 py-2 cursor-pointer hover:bg-[#c01b15] transition-colors flex items-center justify-center"
+          >
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12,5 19,12 12,19"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="pt-6 border-t border-white/07 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
+      <span>© {currentYear} CFG TWPO Performance. Todos los derechos reservados.</span>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white/60 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-white/60 transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .clip-polygon {
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
+  }
+</style>
