@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+import bgImage from '../assets/Background+Image-005.jpg';
+---
+
+<Layout>
+  <div class="stats-page" style={`background-image: url(${bgImage.src}); background-size: cover; background-position: center; background-blend-mode: overlay;`}>
+    <!-- Header -->
+    <header class="stats-header">
+      <div class="stats-header-inner">
+        <a href="/" class="stats-logo">
+          <div class="stats-logo-icon"></div>
+          <div class="stats-logo-div"></div>
+          <span>CFG TWPO</span>
+        </a>
+
+        <nav class="stats-nav">
+          <a href="/">Home</a>
+          <a href="/catalog">Catálogo</a>
+          <a href="#">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Stats Container -->
+    <div class="stats-container">
+      <div class="stats-title">
+        <h1>Estadísticas</h1>
+        <p>Panel de análisis y métricas del negocio</p>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="stats-kpis">
+        <div class="stat-card">
+          <div class="stat-card-icon stat-card-icon-revenue"></div>
+          <div class="stat-card-label">Ingresos Totales</div>
+          <div class="stat-card-value">$124,500</div>
+          <div class="stat-card-change stat-card-change-positive">
+            <span class="stat-arrow">↑</span> 12%
+            <span class="stat-period">vs mes anterior</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-icon stat-card-icon-orders"></div>
+          <div class="stat-card-label">Pedidos Totales</div>
+          <div class="stat-card-value">1,240</div>
+          <div class="stat-card-change stat-card-change-positive">
+            <span class="stat-arrow">↑</span> 5%
+            <span class="stat-period">vs mes anterior</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-icon stat-card-icon-visitors"></div>
+          <div class="stat-card-label">Visitantes Activos</div>
+          <div class="stat-card-value">3,847</div>
+          <div class="stat-card-change stat-card-change-positive">
+            <span class="stat-arrow">↑</span> 18%
+            <span class="stat-period">vs mes anterior</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card-icon stat-card-icon-products"></div>
+          <div class="stat-card-label">Productos Vendidos</div>
+          <div class="stat-card-value">2,156</div>
+          <div class="stat-card-change stat-card-change-positive">
+            <span class="stat-arrow">↑</span> 8%
+            <span class="stat-period">vs mes anterior</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="stats-charts">
+        <div class="stats-chart">
+          <h3>Ventas por Categoría</h3>
+          <div class="stats-chart-content">
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">Motores</span>
+              <div class="stat-bar-container">
+                <div class="stat-bar" style="width: 75%;"></div>
+              </div>
+              <span class="stat-bar-value">$45,200</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">Escape</span>
+              <div class="stat-bar-container">
+                <div class="stat-bar" style="width: 60%;"></div>
+              </div>
+              <span class="stat-bar-value">$32,400</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">Suspensión</span>
+              <div class="stat-bar-container">
+                <div class="stat-bar" style="width: 45%;"></div>
+              </div>
+              <span class="stat-bar-value">$24,300</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">Frenos</span>
+              <div class="stat-bar-container">
+                <div class="stat-bar" style="width: 35%;"></div>
+              </div>
+              <span class="stat-bar-value">$18,900</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">Accesorios</span>
+              <div class="stat-bar-container">
+                <div class="stat-bar" style="width: 20%;"></div>
+              </div>
+              <span class="stat-bar-value">$10,800</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-chart">
+          <h3>Productos Más Vendidos</h3>
+          <div class="stats-product-list">
+            <div class="stat-product-item">
+              <span class="stat-product-rank">1</span>
+              <div class="stat-product-info">
+                <span class="stat-product-name">Titanium X-Pipe Exhaust</span>
+                <span class="stat-product-brand">TwPo Racing</span>
+              </div>
+              <span class="stat-product-sales">342 unidades</span>
+            </div>
+            <div class="stat-product-item">
+              <span class="stat-product-rank">2</span>
+              <div class="stat-product-info">
+                <span class="stat-product-name">Coilover Kit Pro</span>
+                <span class="stat-product-brand">CFG Performance</span>
+              </div>
+              <span class="stat-product-sales">287 unidades</span>
+            </div>
+            <div class="stat-product-item">
+              <span class="stat-product-rank">3</span>
+              <div class="stat-product-info">
+                <span class="stat-product-name">Stage 2 Turbocharger</span>
+                <span class="stat-product-brand">CFG Performance</span>
+              </div>
+              <span class="stat-product-sales">198 unidades</span>
+            </div>
+            <div class="stat-product-item">
+              <span class="stat-product-rank">4</span>
+              <div class="stat-product-info">
+                <span class="stat-product-name">Carbon Brake Caliper Set</span>
+                <span class="stat-product-brand">CFG Performance</span>
+              </div>
+              <span class="stat-product-sales">156 unidades</span>
+            </div>
+            <div class="stat-product-item">
+              <span class="stat-product-rank">5</span>
+              <div class="stat-product-info">
+                <span class="stat-product-name">Digital Racing Dashboard</span>
+                <span class="stat-product-brand">TwPo Racing</span>
+              </div>
+              <span class="stat-product-sales">124 unidades</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="stats-activity">
+        <h3>Actividad Reciente</h3>
+        <div class="stats-activity-list">
+          <div class="stat-activity-item">
+            <div class="stat-activity-dot stat-activity-dot-order"></div>
+            <div class="stat-activity-content">
+              <span class="stat-activity-title">Nuevo pedido #1247</span>
+              <span class="stat-activity-desc">Titanium X-Pipe Exhaust - $1,299.00</span>
+            </div>
+            <span class="stat-activity-time">Hace 2 min</span>
+          </div>
+          <div class="stat-activity-item">
+            <div class="stat-activity-dot stat-activity-dot-review"></div>
+            <div class="stat-activity-content">
+              <span class="stat-activity-title">Nueva reseña</span>
+              <span class="stat-activity-desc">"Excelente calidad..." - ★★★★★</span>
+            </div>
+            <span class="stat-activity-time">Hace 15 min</span>
+          </div>
+          <div class="stat-activity-item">
+            <div class="stat-activity-dot stat-activity-dot-stock"></div>
+            <div class="stat-activity-content">
+              <span class="stat-activity-title">Stock bajo</span>
+              <span class="stat-activity-desc">Stage 2 Turbocharger - 5 unidades restantes</span>
+            </div>
+            <span class="stat-activity-time">Hace 1 hora</span>
+          </div>
+          <div class="stat-activity-item">
+            <div class="stat-activity-dot stat-activity-dot-user"></div>
+            <div class="stat-activity-content">
+              <span class="stat-activity-title">Nuevo cliente registrado</span>
+              <span class="stat-activity-desc">Juan Pérez - Bogotá, Colombia</span>
+            </div>
+            <span class="stat-activity-time">Hace 3 horas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .stats-page { min-height: 100vh; background: #0d0d0d; color: #fff; font-family: 'Space Grotesk', sans-serif; }
+  
+  /* Header */
+  .stats-header { background: #000; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .stats-header-inner { max-width: 1400px; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 2rem; }
+  .stats-logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; flex-shrink: 0; }
+  .stats-logo-icon { width: 24px; height: 18px; background: #DF201A; clip-path: polygon(10% 0,90% 0,100% 100%,0 100%); }
+  .stats-logo-div { width: 1px; height: 22px; background: rgba(255,255,255,.2); transform: rotate(12deg); }
+  .stats-logo span { font-size: 1rem; font-weight: 700; letter-spacing: .06em; color: #fff; }
+  .stats-nav { display: flex; gap: 1.5rem; }
+  .stats-nav a { color: rgba(255,255,255,.5); text-decoration: none; font-weight: 600; transition: color .15s; }
+  .stats-nav a:hover { color: #fff; }
+
+  /* Container */
+  .stats-container { max-width: 1400px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  
+  /* Title */
+  .stats-title { margin-bottom: 2rem; }
+  .stats-title h1 { font-size: 2rem; font-weight: 700; margin-bottom: .5rem; }
+  .stats-title p { color: rgba(255,255,255,.5); }
+
+  /* KPIs */
+  .stats-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+  .stat-card { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; position: relative; overflow: hidden; }
+  .stat-card-icon { position: absolute; top: 1rem; right: 1rem; width: 48px; height: 48px; border-radius: 12px; opacity: .15; }
+  .stat-card-icon-revenue { background: #DF201A; }
+  .stat-card-icon-orders { background: #E39B1D; }
+  .stat-card-icon-visitors { background: #1ED838; }
+  .stat-card-icon-products { background: #3B82F6; }
+  .stat-card-label { font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; }
+  .stat-card-value { font-size: 2rem; font-weight: 800; margin-bottom: .5rem; }
+  .stat-card-change { display: flex; align-items: center; gap: .5rem; font-size: .85rem; }
+  .stat-card-change-positive { color: #1ED838; }
+  .stat-arrow { font-weight: 700; }
+  .stat-period { color: rgba(255,255,255,.4); }
+
+  /* Charts */
+  .stats-charts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+  @media (max-width: 900px) { .stats-charts { grid-template-columns: 1fr; } }
+  
+  .stats-chart { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; }
+  .stats-chart h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+  /* Bar Chart */
+  .stat-bar-item { display: grid; grid-template-columns: 100px 1fr 80px; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  .stat-bar-label { font-size: .85rem; color: rgba(255,255,255,.7); }
+  .stat-bar-container { height: 24px; background: rgba(255,255,255,.05); border-radius: 4px; overflow: hidden; }
+  .stat-bar { height: 100%; background: linear-gradient(90deg, #DF201A, #c01b15); border-radius: 4px; }
+  .stat-bar-value { font-size: .85rem; font-weight: 600; text-align: right; }
+
+  /* Product List */
+  .stat-product-item { display: flex; align-items: center; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .stat-product-item:last-child { border-bottom: none; }
+  .stat-product-rank { width: 28px; height: 28px; background: rgba(255,255,255,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 700; }
+  .stat-product-info { flex: 1; display: flex; flex-direction: column; }
+  .stat-product-name { font-weight: 600; }
+  .stat-product-brand { font-size: .8rem; color: rgba(255,255,255,.5); }
+  .stat-product-sales { font-size: .85rem; color: #1ED838; }
+
+  /* Activity */
+  .stats-activity { background: #1a1a1a; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 1.5rem; }
+  .stats-activity h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.5rem; }
+  
+  .stat-activity-item { display: flex; align-items: center; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+  .stat-activity-item:last-child { border-bottom: none; }
+  .stat-activity-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .stat-activity-dot-order { background: #1ED838; }
+  .stat-activity-dot-review { background: #E39B1D; }
+  .stat-activity-dot-stock { background: #EF4444; }
+  .stat-activity-dot-user { background: #3B82F6; }
+  .stat-activity-content { flex: 1; display: flex; flex-direction: column; }
+  .stat-activity-title { font-weight: 600; font-size: .9rem; }
+  .stat-activity-desc { font-size: .8rem; color: rgba(255,255,255,.5); }
+  .stat-activity-time { font-size: .75rem; color: rgba(255,255,255,.4); }
+</style>

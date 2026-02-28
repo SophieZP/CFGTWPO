@@ -1,5 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import bgImage from '../../assets/Background+Image-005.jpg';
+import engineImage from '../../assets/Engine block assembly-012.jpg';
+import suspensionImage from '../../assets/Suspension Kit-016.jpg';
+import exhaustImage from '../../assets/Titanium Exhaust Tip-015.jpg';
+import wheelImage from '../../assets/Alloy Wheel-018.jpg';
+import turboImage from '../../assets/Turbocharger-008.jpg';
+import brakeImage from '../../assets/Brake disc rotor-007.jpg';
+import helmetImage from '../../assets/Motorcycle helmet-009.jpg';
+import sparkImage from '../../assets/Spark plugs-010.jpg';
 ---
 
 <Layout>
@@ -54,7 +63,7 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="lp-hero">
-    <div class="lp-hero-bg"></div>
+    <div class="lp-hero-bg"><img src={bgImage.src} alt="Hero Background" /></div>
     <div class="lp-hero-grad"></div>
     <div class="lp-hero-inner">
       <div class="lp-hero-content">
@@ -106,28 +115,28 @@ import Layout from '../../layouts/Layout.astro';
 
       <div class="lp-cats">
         <a href="/catalog" class="lp-cat">
-          <div class="lp-cat-img" style="background: linear-gradient(135deg, #1a0a0a, #2d1010);"></div>
+          <div class="lp-cat-img"><img src={engineImage.src} alt="Motor" /></div>
           <div class="lp-cat-overlay">
             <p class="lp-cat-title">MOTOR</p>
             <p class="lp-cat-sub">COMPONENTES</p>
           </div>
         </a>
         <a href="/catalog" class="lp-cat">
-          <div class="lp-cat-img" style="background: linear-gradient(135deg, #0a1020, #10182d);"></div>
+          <div class="lp-cat-img"><img src={suspensionImage.src} alt="Suspensión" /></div>
           <div class="lp-cat-overlay">
             <p class="lp-cat-title">SUSPENSIÓN</p>
             <p class="lp-cat-sub">FRENOS Y AMORTIGUADORES</p>
           </div>
         </a>
         <a href="/catalog" class="lp-cat">
-          <div class="lp-cat-img" style="background: linear-gradient(135deg, #1a1000, #2d1e00);"></div>
+          <div class="lp-cat-img"><img src={exhaustImage.src} alt="Escape" /></div>
           <div class="lp-cat-overlay">
             <p class="lp-cat-title">ESCAPE</p>
             <p class="lp-cat-sub">SISTEMAS COMPLETOS</p>
           </div>
         </a>
         <a href="/catalog" class="lp-cat">
-          <div class="lp-cat-img" style="background: linear-gradient(135deg, #0a1a0a, #102d10);"></div>
+          <div class="lp-cat-img"><img src={wheelImage.src} alt="Ruedas" /></div>
           <div class="lp-cat-overlay">
             <p class="lp-cat-title">RUEDAS</p>
             <p class="lp-cat-sub">LLANTAS Y RINES</p>
@@ -150,9 +159,9 @@ import Layout from '../../layouts/Layout.astro';
 
       <div class="lp-products">
 
-        <a href="/product" class="lp-product">
+        <a href="/productdetails" class="lp-product">
           <div class="lp-product-img">
-            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #1a1a1a, #0d0d0d);"></div>
+            <div class="lp-product-img-inner"><img src={brakeImage.src} alt="Carbon Ceramic Rotor Kit" /></div>
             <span class="lp-stock lp-stock-green">Disponible</span>
           </div>
           <div class="lp-product-info">
@@ -168,9 +177,9 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/product" class="lp-product">
+        <a href="/productdetails" class="lp-product">
           <div class="lp-product-img">
-            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #1a1200, #0d0900);"></div>
+            <div class="lp-product-img-inner"><img src={turboImage.src} alt="Twin-Scroll Turbo T4" /></div>
             <span class="lp-stock lp-stock-green">Disponible</span>
           </div>
           <div class="lp-product-info">
@@ -186,9 +195,9 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/product" class="lp-product lp-product-sold">
+        <a href="/productdetails" class="lp-product lp-product-sold">
           <div class="lp-product-img">
-            <div class="lp-product-img-inner lp-img-dim" style="background: linear-gradient(135deg, #111, #0a0a0a);"></div>
+            <div class="lp-product-img-inner lp-img-dim"><img src={helmetImage.src} alt="Aero Carbon Helmet" /></div>
             <span class="lp-stock lp-stock-gray">Agotado</span>
           </div>
           <div class="lp-product-info">
@@ -204,9 +213,9 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/product" class="lp-product">
+        <a href="/productdetails" class="lp-product">
           <div class="lp-product-img">
-            <div class="lp-product-img-inner" style="background: linear-gradient(135deg, #0a1a0a, #060d06);"></div>
+            <div class="lp-product-img-inner"><img src={sparkImage.src} alt="Iridium Spark Plugs" /></div>
             <span class="lp-stock lp-stock-green">Disponible</span>
           </div>
           <div class="lp-product-info">
@@ -253,6 +262,7 @@ import Layout from '../../layouts/Layout.astro';
           <a href="#">Rastreo de pedido</a>
           <a href="#">Devoluciones</a>
           <a href="#">Envíos</a>
+          <a href="/stadistics">Estadísticas</a>
           <a href="#">Contacto</a>
         </div>
 
@@ -330,6 +340,7 @@ import Layout from '../../layouts/Layout.astro';
   /* ── HERO ── */
   .lp-hero { position: relative; overflow: hidden; min-height: clamp(400px, 60vh, 680px); display: flex; align-items: center; }
   .lp-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a0a 0%, #111 60%, #1a0a08 100%); }
+  .lp-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
   .lp-hero-grad { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(223,32,26,.08) 0%, transparent 70%); }
   .lp-hero-inner { max-width: 1400px; width: 100%; margin: 0 auto; padding: clamp(3rem,8vw,6rem) 1.5rem; position: relative; z-index: 1; }
   .lp-hero-content { max-width: 720px; }
@@ -366,6 +377,7 @@ import Layout from '../../layouts/Layout.astro';
   .lp-cat { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); text-decoration: none; display: block; aspect-ratio: 3/4; }
   @media (min-width: 768px) { .lp-cat { aspect-ratio: 1/1; } }
   .lp-cat-img { position: absolute; inset: 0; }
+  .lp-cat-img img { width: 100%; height: 100%; object-fit: cover; }
   .lp-cat-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,.9) 0%, rgba(0,0,0,.6) 50%, transparent 100%); border-top: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(2px); }
   .lp-cat-title { font-size: .95rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .04em; margin-bottom: .15rem; }
   .lp-cat-sub { font-size: .62rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.4); }
@@ -378,6 +390,7 @@ import Layout from '../../layouts/Layout.astro';
   .lp-product-sold { opacity: .7; }
   .lp-product-img { position: relative; aspect-ratio: 4/3; }
   .lp-product-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .lp-product-img-inner img { width: 100%; height: 100%; object-fit: cover; }
   .lp-img-dim { opacity: .5; }
   .lp-stock { position: absolute; top: .75rem; left: .75rem; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: .2rem .55rem; border-radius: 3px; }
   .lp-stock-green { background: #1ED838; color: #000; }

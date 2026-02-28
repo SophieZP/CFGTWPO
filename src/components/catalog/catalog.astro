@@ -1,5 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import exhaustImage from '../../assets/Titanium Exhaust Tip-015.jpg';
+import suspensionImage from '../../assets/Suspension Kit-016.jpg';
+import steeringImage from '../../assets/Steering Wheel-017.jpg';
+import wheelImage from '../../assets/Alloy Wheel-018.jpg';
+import dashImage from '../../assets/Digital Dash-019.jpg';
+import turboImage from '../../assets/Turbocharger-008.jpg';
+import intakeImage from '../../assets/Engine block assembly-012.jpg';
+import brakeImage from '../../assets/Brake disc rotor-007.jpg';
 ---
 
 <Layout>
@@ -23,7 +31,7 @@ import Layout from '../../layouts/Layout.astro';
         <a href="/">Home</a>
         <a href="/catalog" class="active">Catálogo</a>
         <a href="/catalog">New Arrivals</a>
-        <a href="#">Support</a>
+        <a href="/stadistics">Support</a>
       </nav>
 
       <div class="cat-header-actions">
@@ -150,9 +158,9 @@ import Layout from '../../layouts/Layout.astro';
       <div class="cat-grid">
 
         <!-- Card 1 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #1a1200, #0d0900);"></div>
+            <div class="cat-card-bg"><img src={exhaustImage.src} alt="Titanium X-Pipe Exhaust" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -166,9 +174,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 2 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #0a1020, #060b18);"></div>
+            <div class="cat-card-bg"><img src={suspensionImage.src} alt="Coilover Kit Pro" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -182,9 +190,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 3 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #1a1a1a, #0a0a0a);"></div>
+            <div class="cat-card-bg"><img src={steeringImage.src} alt="Carbon Fiber Steering Wheel" /></div>
             <span class="cat-tag cat-tag-red">Pre-Order</span>
           </div>
           <div class="cat-card-body">
@@ -198,9 +206,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 4 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #0d1a0d, #070d07);"></div>
+            <div class="cat-card-bg"><img src={wheelImage.src} alt="Monoblock Forged Wheels" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -214,9 +222,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 5 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #101018, #08080f);"></div>
+            <div class="cat-card-bg"><img src={dashImage.src} alt="Digital Racing Dashboard" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -230,9 +238,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 6 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #1a1000, #0d0800);"></div>
+            <div class="cat-card-bg"><img src={turboImage.src} alt="Stage 2 Turbocharger Kit" /></div>
             <span class="cat-tag cat-tag-gray">Low Stock</span>
           </div>
           <div class="cat-card-body">
@@ -246,9 +254,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 7 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #1a0a0a, #0d0505);"></div>
+            <div class="cat-card-bg"><img src={intakeImage.src} alt="High-Flow Intake Manifold" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -262,9 +270,9 @@ import Layout from '../../layouts/Layout.astro';
         </a>
 
         <!-- Card 8 -->
-        <a href="/product" class="cat-card">
+        <a href="/productdetails" class="cat-card">
           <div class="cat-card-img">
-            <div class="cat-card-bg" style="background: linear-gradient(135deg, #0a100a, #060a06);"></div>
+            <div class="cat-card-bg"><img src={brakeImage.src} alt="Carbon Brake Caliper Set" /></div>
             <span class="cat-tag cat-tag-green">In Stock</span>
           </div>
           <div class="cat-card-body">
@@ -377,6 +385,7 @@ import Layout from '../../layouts/Layout.astro';
   .cat-card:hover { border-color: rgba(255,255,255,.2); transform: translateY(-3px); }
   .cat-card-img { position: relative; aspect-ratio: 1; overflow: hidden; }
   .cat-card-bg { position: absolute; inset: 0; }
+  .cat-card-bg img { width: 100%; height: 100%; object-fit: cover; }
   .cat-tag { position: absolute; top: .65rem; left: .65rem; font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .18rem .5rem; border-radius: 3px; backdrop-filter: blur(4px); }
   .cat-tag-green { background: rgba(0,0,0,.6); border: 1px solid rgba(30,216,56,.8); color: #1ED838; }
   .cat-tag-red { background: rgba(0,0,0,.6); border: 1px solid rgba(223,32,26,.8); color: #DF201A; }
