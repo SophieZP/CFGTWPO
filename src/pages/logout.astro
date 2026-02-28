@@ -1,0 +1,26 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Cerrando Sesión - CFG TWPO">
+  <!-- Logout Processing -->
+  <div class="min-h-[calc(100vh-3.5rem)] bg-[#111] flex items-center justify-center">
+    <div class="text-center">
+      <div class="w-16 h-16 border-4 border-[#DF201A] border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+      <h1 class="text-2xl font-bold text-white mb-2">Cerrando sesión...</h1>
+      <p class="text-white/50">Serás redirigido en un momento.</p>
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+  import { logout, redirectTo } from '../config/auth';
+  
+  // Execute logout
+  logout();
+  
+  // Redirect to home after a short delay
+  setTimeout(() => {
+    redirectTo('/');
+  }, 500);
+</script>

@@ -6,10 +6,10 @@ interface Props {
 const { activePage = 'home' } = Astro.props;
 
 const navLinks = [
-  { href: '/', label: 'Inicio', page: 'home' },
-  { href: '/catalog', label: 'Catálogo', page: 'catalog' },
-  { href: '/catalog?filter=new', label: 'Nuevos', page: 'new' },
-  { href: '/stadistics', label: 'Estadísticas', page: 'stats' },
+  { href: '/', label: 'Inicio', page: 'home', prefetch: true },
+  { href: '/catalog', label: 'Catálogo', page: 'catalog', prefetch: true },
+  { href: '/catalog?filter=new', label: 'Nuevos', page: 'new', prefetch: true },
+  { href: '/stadistics', label: 'Estadísticas', page: 'stats', requiresAuth: true },
 ];
 ---
 
@@ -28,6 +28,8 @@ const navLinks = [
         {navLinks.map((link) => (
           <a
             href={link.href}
+            data-prefetch={link.prefetch ? 'true' : undefined}
+            data-requires-auth={link.requiresAuth ? 'true' : undefined}
             class:list={[
               'text-xs font-semibold uppercase tracking-wider transition-colors duration-150 whitespace-nowrap',
               activePage === link.page 
@@ -82,6 +84,8 @@ const navLinks = [
     {navLinks.map((link) => (
       <a
         href={link.href}
+        data-prefetch={link.prefetch ? 'true' : undefined}
+        data-requires-auth={link.requiresAuth ? 'true' : undefined}
         class:list={[
           'block px-3 py-2 text-sm font-semibold rounded-md transition-colors',
           activePage === link.page 

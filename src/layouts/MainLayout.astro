@@ -34,5 +34,19 @@ const {
       <slot />
     </main>
     <Footer />
+    <!-- Navigation Initialization -->
+    <script>
+      import { initNavigation } from '../config/navigation';
+      
+      // Initialize navigation with prefetching
+      document.addEventListener('DOMContentLoaded', () => {
+        initNavigation({ enabled: true, timeout: 200 });
+      });
+      
+      // Also try to run on view transitions
+      document.addEventListener('astro:page-load', () => {
+        initNavigation({ enabled: true, timeout: 200 });
+      });
+    </script>
   </body>
 </html>
