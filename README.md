@@ -1,23 +1,18 @@
-# Astro Starter Kit: Basics
+# CFG TWPO - E-commerce de Partes Automotrices
 
-```sh
-npm create astro@latest -- --template basics
-```
+Tienda en línea especializada en componentes de alto rendimiento para motos y carros. Construida con Astro, React y Tailwind CSS.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📋 Características
 
-## 🚀 Project Structure
+- ✅ Catálogo dinámico de productos
+- ✅ Páginas de detalles de productos individuales
+- ✅ Diseño responsivo moderno
+- ✅ Optimizado para SEO
+- ✅ Deploy automático en GitHub Pages
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🚀 Quick Start
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
+### Instalación local
 │   │   └── Welcome.astro
 │   ├── layouts
 │   │   └── Layout.astro
